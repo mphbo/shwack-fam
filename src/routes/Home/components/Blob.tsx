@@ -10,7 +10,7 @@ const Blob = () => {
     return (blobRef.current.uTime = clock.getElapsedTime());
   });
   return (
-    <mesh position-y={1.8} position-z={-2.8} scale={1.1}>
+    <mesh position-y={2.6} position-z={-2.8} scale={1.3}>
       <icosahedronGeometry args={[1.2, 20]} />
       {/* @ts-ignore */}
       <blobShaderMaterial ref={blobRef} wireframe />
