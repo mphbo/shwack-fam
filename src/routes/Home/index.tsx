@@ -12,6 +12,9 @@ function Home() {
 
   useEffect(() => {
     audio?.play();
+
+    // TODO FIND A WAY TO ANALYZE AUDIO AND THEN FEED BACK INTO SHADER
+    console.log({ audio });
   }, [audio]);
 
   return (
