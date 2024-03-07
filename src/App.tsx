@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Visualizer from "./components/Visualizer";
-import Navbar from "./components/Navbar";
+import Visualizer from "./routes/Home/components/Visualizer";
+import Navbar from "./routes/Home/components/Navbar";
 import styles from "./page.module.scss";
+import { Router } from "react-router-dom";
 
 function App() {
   const [audio, setAudio] = useState<null | HTMLAudioElement>(null);
@@ -16,15 +17,7 @@ function App() {
   //   audio?.play();
   // }, [audio]);
 
-  return (
-    <div className="App">
-      <Navbar />
-      <div className={styles.main}>
-        <Visualizer audioUrl="/back-to-the-matrix.mp3" />
-      </div>
-      <div>Here is more content</div>
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
