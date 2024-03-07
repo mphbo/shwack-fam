@@ -112,7 +112,7 @@ const BlobShaderMaterial = shaderMaterial(
     uniform float uTime;
 
     void main() {
-      float noise = 3.0 * pnoise(position + uTime, vec3(10.0));
+      float noise = 4.0 * pnoise(position + uTime, vec3(10.0));
       float displacement = noise / 10.0;
       vec3 newPosition = position + normal * displacement;
       gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
@@ -129,7 +129,7 @@ const BlobShaderMaterial = shaderMaterial(
     
     void main() {
       vec2 st = gl_FragCoord.xy / uResolution;
-      gl_FragColor = vec4(vec3(0.5, 0.5, 1.0), 1.0);
+      gl_FragColor = vec4(vec3(0.1, 0.6, 1.0), 1.0);
     }
     `
 );

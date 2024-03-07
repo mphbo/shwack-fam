@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+import styles from "./landing.module.scss";
 import { Link } from "react-router-dom";
 
 function Landing() {

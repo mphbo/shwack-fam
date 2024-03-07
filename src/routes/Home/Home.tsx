@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Visualizer from "./components/Visualizer";
 import Navbar from "./components/Navbar";
-import styles from "../Landing/page.module.scss";
+import styles from "./home.module.scss";
 
 function Home() {
   const [audio, setAudio] = useState<null | HTMLAudioElement>(null);
@@ -18,8 +18,11 @@ function Home() {
   }, [audio]);
 
   return (
-    <div className="App">
+    <div className={styles.page}>
       <Navbar />
+      <div className={styles.main}>
+        <Visualizer audioUrl="/back-to-the-matrix.mp3" />
+      </div>
       <div className={styles.main}>
         <Visualizer audioUrl="/back-to-the-matrix.mp3" />
       </div>

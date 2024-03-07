@@ -29,7 +29,7 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 //   );
 // }
 
-function ResponsiveAppBar() {
+function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -188,4 +188,4 @@ function ResponsiveAppBar() {
     </Slide>
   );
 }
-export default ResponsiveAppBar;
+export default Navbar;

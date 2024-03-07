@@ -16,49 +16,13 @@ export default function Experience() {
   const ballRef = useRef<THREE.Mesh>(null!);
   const groupRef = useRef<THREE.Group>(null!);
 
-  useFrame((state, delta) => {
-    // cubeRef.current.rotation.y += delta;
-    // cubeRef.current.rotation.x += delta;
-    // cubeRef.current.rotation.z += delta;
-    // ballRef.current.rotation.y -= delta * 2;
-    // ballRef.current.rotation.x -= delta * 2;
-    // ballRef.current.rotation.z -= delta * 2;
-    // groupRef.current.rotation.x += delta * 0.25;
-    // groupRef.current.rotation.z += delta * 0.5;
-  });
+  useFrame((state, delta) => {});
 
-  // const uniforms = {
-  // u_resolution: {
-  //   type: "v2",
-  //   value: new THREE.Vector2(window.innerWidth, window.innerHeight),
-  // },
-  // u_time: { type: "f", value: 0.0 },
-  // };
-
-  // const uniforms = useUniforms({
-  //   u_resolution: {
-  //     type: "v2",
-  //     value: new Vector2(window.innerWidth, window.innerHeight),
-  //   },
-  //   u_time: { type: "f", value: 0.0 },
-  // });
   return (
     <>
-      <directionalLight position={[1, 2, 3]} intensity={1.5} />
-      <ambientLight intensity={1} />
+      {/* <directionalLight position={[1, 2, 3]} intensity={1.5} />
+      <ambientLight intensity={1} /> */}
       <group ref={groupRef}>
-        {/* <mesh position-x={2} ref={cubeRef} scale={1}>
-          <boxGeometry />
-          <meshStandardMaterial wireframe color="blue" />
-        </mesh> */}
-        <mesh ref={ballRef} scale={1}>
-          {/* <planeGeometry args={[3, 5]} /> */}
-          {/* {material && <primitive object={material} />} */}
-          {/* <meshStandardMaterial color="red" /> */}
-          {/* @ts-ignore */}
-          {/* <waveShaderMaterial /> */}
-          {/* <shaderMaterial  /> */}
-        </mesh>
         <Blob />
       </group>
     </>
