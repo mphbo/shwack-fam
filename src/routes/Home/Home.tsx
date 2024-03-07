@@ -24,6 +24,16 @@ function Home() {
         <Visualizer audioUrl="/back-to-the-matrix.mp3" />
       </div>
       <div className={styles.main}>
+        <span
+          style={{
+            position: "absolute",
+            margin: "60px 30px 0 30px",
+            textAlign: "center",
+          }}
+        >
+          DON'T WORRY THERE'S GONNA BE A BUNCH OF OTHER DOPE SHIT SOON, JUST
+          KEEP THROWING FUCKING LOONIES IN THAT GOD DAMN ARKADE OKAY
+        </span>
         <Visualizer audioUrl="/back-to-the-matrix.mp3" />
       </div>
     </div>

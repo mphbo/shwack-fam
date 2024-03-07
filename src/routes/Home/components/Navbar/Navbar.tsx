@@ -8,26 +8,14 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import { Accordion, Slide, useScrollTrigger } from "@mui/material";
+import styles from "./navbar.module.scss";
+import { Slide, useScrollTrigger } from "@mui/material";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
-// function HideOnScroll({ children }: { children: React.ReactElement }) {
-//   // Note that you normally won't need to set the window ref as useScrollTrigger
-//   // will default to window.
-//   // This is only being set here because the demo is in an iframe.
-//   return (
-//     <Slide appear={false} direction="down">
-//       {children}
-//     </Slide>
-//   );
-// }
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -58,7 +46,7 @@ function Navbar() {
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
-      <AppBar color="transparent" position="fixed">
+      <AppBar className={styles.navbar} position="fixed">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* Desktop */}
@@ -114,7 +102,9 @@ function Navbar() {
             <ChangeHistoryIcon
               sx={{
                 display: { xs: "flex", md: "none" },
-                mr: 1,
+                mr: 2.8,
+                mb: 0.3,
+                fontSize: 30,
               }}
             />
             <Typography
@@ -123,7 +113,25 @@ function Navbar() {
               component="a"
               href="#app-bar-with-responsive-menu"
               sx={{
-                mr: 2,
+                mr: "15px",
+                display: { xs: "flex", md: "none" },
+                flexGrow: 0.0,
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              DARK
+            </Typography>
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                mr: 0,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
                 fontFamily: "monospace",
@@ -133,7 +141,7 @@ function Navbar() {
                 textDecoration: "none",
               }}
             >
-              DARK ARKADE
+              ARKADE
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
