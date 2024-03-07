@@ -112,7 +112,7 @@ const BlobShaderMaterial = shaderMaterial(
     uniform float uTime;
 
     void main() {
-      float noise = pnoise(position + uTime, vec3(10.0));
+      float noise = 3.0 * pnoise(position + uTime, vec3(10.0));
       float displacement = noise / 10.0;
       vec3 newPosition = position + normal * displacement;
       gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);

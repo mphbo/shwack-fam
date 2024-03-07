@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
 import styles from "./page.module.scss";
-import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function Landing() {
