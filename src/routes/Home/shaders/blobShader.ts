@@ -9,6 +9,7 @@ const BlobShaderMaterial = shaderMaterial(
   {
     uResolution: 1,
     uTime: 0,
+    uFrequency: 1,
   },
   // Vertex Shader
   glsl`
@@ -110,10 +111,12 @@ const BlobShaderMaterial = shaderMaterial(
     precision mediump float;
 
     uniform float uTime;
+    uniform float uFrequency;
+
 
     void main() {
       float noise = 4.0 * pnoise(position + uTime, vec3(10.0));
-      float displacement = noise / 10.0;
+      float displacement = uFrequency * noise / 10.0;
       vec3 newPosition = position + normal * displacement;
       gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
     }

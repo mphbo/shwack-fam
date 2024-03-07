@@ -8,10 +8,11 @@ function Home() {
 
   useEffect(() => {
     setAudio(new Audio("/back-to-the-matrix.mp3"));
+    const audioContext = new AudioContext();
   }, []);
 
   useEffect(() => {
-    audio?.play();
+    // audio?.play();
 
     // TODO FIND A WAY TO ANALYZE AUDIO AND THEN FEED BACK INTO SHADER
     console.log({ audio });
