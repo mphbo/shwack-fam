@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useFrame, extend } from "@react-three/fiber";
 import BlobShaderMaterial from "../shaders/blobShader";
 
-const Blob = () => {
+const Blob = ({ audio }) => {
   const analyser = useRef(null);
   const dataArray = useRef(null);
 
@@ -12,7 +12,6 @@ const Blob = () => {
     analyser.current = audioContext.createAnalyser();
     analyser.current.fftSize = 256;
 
-    const audio = new Audio("/back-to-the-matrix.mp3");
     audio.play();
     const source = audioContext.createMediaElementSource(audio);
     source.connect(analyser.current);
