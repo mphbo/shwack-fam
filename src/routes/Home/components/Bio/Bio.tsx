@@ -6,7 +6,7 @@ function Bio() {
     <div className={styles.bio}>
       <ChangeHistoryIcon
         sx={{
-          fontSize: 60,
+          fontSize: 70,
         }}
       />
       <span className={styles.bioText}>
