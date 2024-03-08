@@ -31,8 +31,9 @@ function Home() {
             textAlign: "center",
           }}
         >
-          DON'T WORRY THERE'S GONNA BE A BUNCH OF OTHER DOPE SHIT SOON, JUST
-          KEEP THROWING FUCKING LOONIES IN THAT GOD DAMN ARKADE OKAY
+          DARK ARKADE is a musical journey into the shadows, where melodies,
+          textures, and atmospheres create a captivating and haunting sonic
+          landscape that evokes emotions and stories beyond the ordinary.
         </span>
       </div>
     </div>
