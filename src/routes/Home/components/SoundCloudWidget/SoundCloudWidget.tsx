@@ -125,8 +125,9 @@ function SoundCloudWidget({
   return (
     <Card
       sx={{
-        maxWidth: "90%",
-        width: "80%",
+        maxWidth: "800px",
+        width: "100%",
+        margin: "10px",
         backgroundColor: "rgba(1, 1, 55, 0.4)",
         borderRadius: 0,
       }}
