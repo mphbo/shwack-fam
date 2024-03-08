@@ -33,10 +33,8 @@ const ExpandMore = styled(
 
 function SoundCloudWidget({
   audio,
-  setAudio,
 }: {
-  audio: null | HTMLAudioElement;
-  setAudio: (audio: null | HTMLAudioElement) => void;
+  audio: React.MutableRefObject<HTMLAudioElement | null>;
 }) {
   // state
 
@@ -53,6 +51,11 @@ function SoundCloudWidget({
 
   // initialization - load soundcloud widget API and set SC event listeners
 
+  const pauseMusic = () => {
+    console.log("hit2");
+    audio?.current?.pause();
+  };
+
   useEffect(() => {
     // use load-script module to load SC Widget API
     loadscript("https://w.soundcloud.com/player/api.js", () => {
@@ -67,8 +70,9 @@ function SoundCloudWidget({
 
       player.bind(PLAY, () => {
         // update state to playing
+        console.log("hit");
         setIsPlaying(true);
-        setAudio(null);
+        pauseMusic();
 
         // check to see if song has changed - if so update state with next index
         player.getCurrentSoundIndex((playerPlaylistIndex: number) => {
@@ -120,6 +124,7 @@ function SoundCloudWidget({
 
   const handleExpand = () => {
     setIsExpanded((prev) => !prev);
+    // audio?.pause();
   };
 
   return (

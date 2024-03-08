@@ -5,7 +5,7 @@ import Blob from "./Blob";
 export default function Experience({
   audio,
 }: {
-  audio: null | HTMLAudioElement;
+  audio: React.MutableRefObject<HTMLAudioElement | null>;
 }) {
   const groupRef = useRef<THREE.Group>(null!);
 

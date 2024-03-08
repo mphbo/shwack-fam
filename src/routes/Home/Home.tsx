@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Visualizer from "./components/Visualizer";
 import Navbar from "./components/Navbar";
 import styles from "./home.module.scss";
 import SoundCloudWidget from "./components/SoundCloudWidget";
 
 function Home() {
-  const [audio, setAudio] = useState<null | HTMLAudioElement>(null);
+  // const [audio, setAudio] = useState<null | HTMLAudioElement>(null);
+  const audio = useRef<null | HTMLAudioElement>(null);
 
   useEffect(() => {
-    setAudio(new Audio("/back-to-the-matrix.mp3"));
+    audio.current = new Audio("/back-to-the-matrix.mp3");
   }, []);
 
   return (
@@ -30,7 +31,7 @@ function Home() {
         </span>
       </div>
       <div className={styles.soundcloudSection}>
-        <SoundCloudWidget audio={audio} setAudio={setAudio} />
+        <SoundCloudWidget audio={audio} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useFrame, extend } from "@react-three/fiber";
 import BlobShaderMaterial from "../shaders/blobShader";
 
@@ -12,18 +12,17 @@ const Blob = ({ audio }) => {
     analyser.current = audioContext.createAnalyser();
     analyser.current.fftSize = 256;
 
-    audio.play();
-    const source = audioContext.createMediaElementSource(audio);
+    audio.current.play();
+    const source = audioContext.createMediaElementSource(audio.current);
     source.connect(analyser.current);
     analyser.current.connect(audioContext.destination);
 
     dataArray.current = new Uint8Array(analyser.current.frequencyBinCount);
 
-    // Cleanup on component unmount
     return () => {
       audioContext.close();
     };
-  }, []); // Empty dependency array to run the effect only once on mount
+  }, []);
   extend({ BlobShaderMaterial });
   const blobRef = useRef(null);
   useFrame(({ clock }) => {
@@ -36,11 +35,8 @@ const Blob = ({ audio }) => {
     }
 
     const averageFrequency = sum / dataArray.current.length;
-    console.log("Average Frequency:", averageFrequency);
     // @ts-ignore
     blobRef.current.uTime = clock.getElapsedTime();
-    const value = analyser;
-    // console.log(value);
     // @ts-ignore
     blobRef.current.uFrequency = averageFrequency / 75;
   });

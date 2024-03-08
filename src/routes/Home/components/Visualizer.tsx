@@ -2,7 +2,11 @@ import React, { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience";
 
-const Visualizer = ({ audio }: { audio: null | HTMLAudioElement }) => {
+const Visualizer = ({
+  audio,
+}: {
+  audio: React.MutableRefObject<HTMLAudioElement | null>;
+}) => {
   return (
     <Canvas>
       <Suspense fallback={null}>
