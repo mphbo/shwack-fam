@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Visualizer from "./components/Visualizer";
 import Navbar from "./components/Navbar";
 import styles from "./home.module.scss";
 import SoundCloudWidget from "./components/SoundCloudWidget";
 import Bio from "./components/Bio/Bio";
+import Email from "./components/Email";
 
 function Home() {
   // const [audio, setAudio] = useState<null | HTMLAudioElement>(null);
@@ -24,6 +25,9 @@ function Home() {
       </div>
       <div className={styles.soundcloudSection}>
         <SoundCloudWidget audio={audio} />
+      </div>
+      <div className={styles.emailSection}>
+        <Email />
       </div>
     </div>
   );
