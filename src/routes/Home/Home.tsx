@@ -21,10 +21,10 @@ function Home() {
   return (
     <div className={styles.page}>
       <Navbar />
-      <div className={styles.main}>
+      <div className={styles.visualizerSection}>
         <Visualizer audioUrl="/back-to-the-matrix.mp3" />
       </div>
-      <div className={styles.main}>
+      <div className={styles.bioSection}>
         <span
           style={{
             position: "absolute",
@@ -35,7 +35,6 @@ function Home() {
           DON'T WORRY THERE'S GONNA BE A BUNCH OF OTHER DOPE SHIT SOON, JUST
           KEEP THROWING FUCKING LOONIES IN THAT GOD DAMN ARKADE OKAY
         </span>
-        <Visualizer audioUrl="/back-to-the-matrix.mp3" />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 .page {
   background-color: black;
 }
-.main {
+.visualizerSection {
   color: black;
   margin-top: -5px;
   height: 90vh;
@@ -13,4 +13,22 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  box-shadow: 0 0 16px 8px #80abbe inset;
+  clip-path: inset(0px 0px -15px 0px);
+}
+
+.bioSection {
+  box-shadow: 0 0 200px -2px #80abbe inset;
+  color: white;
+  margin-top: -5px;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #80abbe;
+  background-image: url('../../assets/bio-arkade.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
 }
