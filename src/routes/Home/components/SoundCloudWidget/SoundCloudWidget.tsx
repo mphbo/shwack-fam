@@ -51,11 +51,6 @@ function SoundCloudWidget({
 
   // initialization - load soundcloud widget API and set SC event listeners
 
-  const pauseMusic = () => {
-    console.log("hit2");
-    audio?.current?.pause();
-  };
-
   useEffect(() => {
     // use load-script module to load SC Widget API
     loadscript("https://w.soundcloud.com/player/api.js", () => {
@@ -70,9 +65,8 @@ function SoundCloudWidget({
 
       player.bind(PLAY, () => {
         // update state to playing
-        console.log("hit");
         setIsPlaying(true);
-        pauseMusic();
+        audio?.current?.pause();
 
         // check to see if song has changed - if so update state with next index
         player.getCurrentSoundIndex((playerPlaylistIndex: number) => {
