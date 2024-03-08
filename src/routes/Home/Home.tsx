@@ -28,7 +28,6 @@ function Home() {
         <span
           style={{
             position: "absolute",
-            margin: "60px 30px 0 30px",
             textAlign: "center",
           }}
         >
