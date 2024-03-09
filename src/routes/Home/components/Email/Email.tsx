@@ -105,7 +105,7 @@ function Home() {
           onChange={(e) => handleChange(EFields.EMAIL, e.target.value)}
         />
         <StyledTextField
-          sx={{ marginBottom: "45px", maxWidth: "400px" }}
+          sx={{ marginBottom: "25px", maxWidth: "400px" }}
           placeholder="Message"
           value={fields.message}
           error={errors.message.isError}
