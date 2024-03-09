@@ -86,7 +86,7 @@ function Navbar() {
                     <ChangeHistoryIcon
                       sx={{
                         display: { xs: "flex", md: "none" },
-                        mr: 5,
+                        mr: 2,
                         mb: 0.3,
                         fontSize: 30,
                       }}
@@ -116,7 +116,7 @@ function Navbar() {
                         component="a"
                         href="#app-bar-with-responsive-menu"
                         sx={{
-                          mr: 0,
+                          mr: 2,
                           fontFamily: "monospace",
                           fontWeight: 700,
                           letterSpacing: ".3rem",
