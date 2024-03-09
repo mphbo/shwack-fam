@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Visualizer from "./components/Visualizer";
 import Navbar from "./components/Navbar";
 import styles from "./home.module.scss";
@@ -9,10 +9,11 @@ import { Container } from "@mui/material";
 
 function Home() {
   const audio = useRef<null | HTMLAudioElement>(null);
-  const visualizerSection = useRef<null | HTMLDivElement>(null);
-  const bioSection = useRef<null | HTMLDivElement>(null);
-  const soundcloudSection = useRef<null | HTMLDivElement>(null);
-  const emailSection = useRef<null | HTMLDivElement>(null);
+
+  const visualizerRef = useRef<null | HTMLDivElement>(null);
+  const bioRef = useRef<null | HTMLDivElement>(null);
+  const soundcloudRef = useRef<null | HTMLDivElement>(null);
+  const emailRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
     audio.current = new Audio("/back-to-the-matrix.mp3");
@@ -21,17 +22,17 @@ function Home() {
   return (
     <div className={styles.page}>
       <Container disableGutters>
-        <Navbar />
-        <div ref={visualizerSection} className={styles.visualizerSection}>
+        <Navbar refs={{ visualizerRef, bioRef, soundcloudRef, emailRef }} />
+        <div ref={visualizerRef} className={styles.visualizerSection}>
           <Visualizer audio={audio} />
         </div>
-        <div ref={bioSection} className={styles.bioSection}>
+        <div ref={bioRef} className={styles.bioSection}>
           <Bio />
         </div>
-        <div ref={soundcloudSection} className={styles.soundcloudSection}>
+        <div ref={soundcloudRef} className={styles.soundcloudSection}>
           <SoundCloudWidget audio={audio} />
         </div>
-        <div ref={emailSection} className={styles.emailSection}>
+        <div ref={emailRef} className={styles.emailSection}>
           <Email />
         </div>
       </Container>

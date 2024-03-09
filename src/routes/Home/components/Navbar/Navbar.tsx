@@ -17,17 +17,36 @@ import {
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
 
-const pages = ["Music", "Email", "Contact"];
+const pages = ["Home", "Music", "Email"];
 
-function Navbar() {
+interface NavBarProps {
+  refs: {
+    visualizerRef: React.MutableRefObject<HTMLDivElement | null>;
+    bioRef: React.MutableRefObject<HTMLDivElement | null>;
+    soundcloudRef: React.MutableRefObject<HTMLDivElement | null>;
+    emailRef: React.MutableRefObject<HTMLDivElement | null>;
+  };
+}
+
+function Navbar({
+  refs: { visualizerRef, bioRef, soundcloudRef, emailRef },
+}: NavBarProps) {
   const trigger = useScrollTrigger({
     target: undefined,
   });
 
+  const handleClick = (page: string) => {
+    page === "Music"
+      ? soundcloudRef?.current?.scrollIntoView({ behavior: "smooth" })
+      : page === "Email"
+      ? emailRef?.current?.scrollIntoView({ behavior: "smooth" })
+      : visualizerRef?.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const accordionDetails = pages.map((page) => (
     <AccordionDetails className={styles.accordionDetails}>
       <div>
-        <Link onClick={() => {}} className={styles.link}>
+        <Link onClick={() => handleClick(page)} className={styles.link}>
           {page}
         </Link>
       </div>
@@ -136,7 +155,7 @@ function Navbar() {
               {pages.map((page) => (
                 <Button
                   key={page}
-                  onClick={() => {}}
+                  onClick={() => handleClick(page)}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}
