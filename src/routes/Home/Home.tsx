@@ -8,8 +8,11 @@ import Email from "./components/Email";
 import { Container } from "@mui/material";
 
 function Home() {
-  // const [audio, setAudio] = useState<null | HTMLAudioElement>(null);
   const audio = useRef<null | HTMLAudioElement>(null);
+  const visualizerSection = useRef<null | HTMLDivElement>(null);
+  const bioSection = useRef<null | HTMLDivElement>(null);
+  const soundcloudSection = useRef<null | HTMLDivElement>(null);
+  const emailSection = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
     audio.current = new Audio("/back-to-the-matrix.mp3");
@@ -19,16 +22,16 @@ function Home() {
     <div className={styles.page}>
       <Container disableGutters>
         <Navbar />
-        <div className={styles.visualizerSection}>
+        <div ref={visualizerSection} className={styles.visualizerSection}>
           <Visualizer audio={audio} />
         </div>
-        <div className={styles.bioSection}>
+        <div ref={bioSection} className={styles.bioSection}>
           <Bio />
         </div>
-        <div className={styles.soundcloudSection}>
+        <div ref={soundcloudSection} className={styles.soundcloudSection}>
           <SoundCloudWidget audio={audio} />
         </div>
-        <div className={styles.emailSection}>
+        <div ref={emailSection} className={styles.emailSection}>
           <Email />
         </div>
       </Container>
