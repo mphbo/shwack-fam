@@ -1,23 +1,22 @@
-import { Divider, List, ListItem, ListItemText } from "@mui/material";
 import styles from "./socials.module.scss";
 import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
-import SocialButton from "./components/LinkButton";
+import SocialButton from "./components/SocialButton";
 
 const socials = [
   {
     title: "Instagram",
     url: "https://www.instagram.com/dark.arkade/",
-    icon: <ChangeHistoryIcon />,
+    image: "instagram.svg",
   },
   {
     title: "TikTok",
     url: "https://www.tiktok.com/@dark.arkade",
-    icon: <ChangeHistoryIcon />,
+    image: "tiktok.svg",
   },
   {
     title: "SoundCloud",
     url: "https://soundcloud.com/logan-norman-thomas",
-    icon: <ChangeHistoryIcon />,
+    image: "soundcloud.svg",
   },
 ];
 
