@@ -7,6 +7,7 @@ import Bio from "./components/Bio/Bio";
 import Email from "./components/Email";
 import { Container } from "@mui/material";
 import Socials from "./components/Socials";
+import BottomNavbar from "./components/BottomNavbar";
 
 function Home() {
   const audio = useRef<null | HTMLAudioElement>(null);
@@ -39,6 +40,7 @@ function Home() {
         <div ref={emailRef} className={styles.emailSection}>
           <Email />
         </div>
+        <BottomNavbar audio={audio} />
       </Container>
     </div>
   );

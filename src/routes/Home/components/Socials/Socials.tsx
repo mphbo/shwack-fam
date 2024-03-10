@@ -1,5 +1,4 @@
 import styles from "./socials.module.scss";
-import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
 import SocialButton from "./components/SocialButton";
 
 const socials = [
@@ -23,15 +22,7 @@ const socials = [
 function Socials() {
   const socialButtons = socials.map((social) => <SocialButton {...social} />);
 
-  return (
-    <ul className={styles.list}>
-      {socialButtons}
-      {/* <li className={styles.listItem}>
-        <ChangeHistoryIcon fontSize="large" />
-        <p>Spotify</p>
-      </li> */}
-    </ul>
-  );
+  return <ul className={styles.list}>{socialButtons}</ul>;
 }
 
 export default Socials;
