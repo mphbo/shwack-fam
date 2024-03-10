@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
-import Visualizer from "./components/Visualizer";
+import Visualizer from "./components/Visualizer/Visualizer";
 import Navbar from "./components/Navbar";
 import styles from "./home.module.scss";
 import SoundCloudWidget from "./components/SoundCloudWidget";
 import Bio from "./components/Bio/Bio";
 import Email from "./components/Email";
 import { Container } from "@mui/material";
+import Socials from "./components/Socials";
 
 function Home() {
   const audio = useRef<null | HTMLAudioElement>(null);
@@ -31,6 +32,9 @@ function Home() {
         </div>
         <div ref={soundcloudRef} className={styles.soundcloudSection}>
           <SoundCloudWidget audio={audio} />
+        </div>
+        <div ref={emailRef} className={styles.socialsSection}>
+          <Socials />
         </div>
         <div ref={emailRef} className={styles.emailSection}>
           <Email />

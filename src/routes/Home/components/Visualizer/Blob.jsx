@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useFrame, extend } from "@react-three/fiber";
-import BlobShaderMaterial from "../shaders/blobShader";
+import BlobShaderMaterial from "./assets/blobShader";
 
 const Blob = ({ audio }) => {
   const analyser = useRef(null);

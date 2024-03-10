@@ -76,71 +76,74 @@ function Home() {
 
   return (
     <div className={styles.email}>
-      <Box
-        component="form"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-      >
-        <p className={styles.heading}>Bookings and Contact:</p>
-        <StyledTextField
-          sx={{
-            marginBottom: "25px",
-            maxWidth: "400px",
-          }}
-          placeholder="Name"
-          value={fields.name}
-          error={errors.name.isError}
-          variant="standard"
-          fullWidth
-          onChange={(e) => handleChange(EFields.NAME, e.target.value)}
-        />
-        <StyledTextField
-          sx={{ marginBottom: "25px", maxWidth: "400px" }}
-          placeholder="Email"
-          value={fields.email}
-          error={errors.email.isError}
-          variant="standard"
-          fullWidth
-          onChange={(e) => handleChange(EFields.EMAIL, e.target.value)}
-        />
-        <StyledTextField
-          sx={{ marginBottom: "25px", maxWidth: "400px" }}
-          placeholder="Message"
-          value={fields.message}
-          error={errors.message.isError}
-          variant="standard"
-          fullWidth
-          multiline
-          size="medium"
-          onChange={(e) => handleChange(EFields.MESSAGE, e.target.value)}
-        />
-        <ButtonGroup fullWidth>
-          <Button
-            onClick={() => handleSubmit(fields)}
-            variant="contained"
-            color="primary"
+      <div className={styles.emailInner}>
+        <Box
+          component="form"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <p className={styles.heading}>Bookings and Contact:</p>
+          <StyledTextField
             sx={{
-              borderRadius: 0,
-              background: "rgba(30, 170, 200, 1)",
-              padding: "8px 35px",
+              marginBottom: "25px",
+              maxWidth: "400px",
             }}
-          >
-            Submit
-          </Button>
-          <Button
-            onClick={handleReset}
-            sx={{
-              borderRadius: 0,
-              borderColor: "rgba(30, 170, 200, 1)",
-              color: "white",
-              padding: "8px 35px",
-            }}
-          >
-            Reset
-          </Button>
-        </ButtonGroup>
-      </Box>
+            placeholder="Name"
+            value={fields.name}
+            error={errors.name.isError}
+            variant="standard"
+            fullWidth
+            onChange={(e) => handleChange(EFields.NAME, e.target.value)}
+          />
+          <StyledTextField
+            sx={{ marginBottom: "25px", maxWidth: "400px" }}
+            placeholder="Email"
+            value={fields.email}
+            error={errors.email.isError}
+            variant="standard"
+            fullWidth
+            onChange={(e) => handleChange(EFields.EMAIL, e.target.value)}
+          />
+          <StyledTextField
+            sx={{ marginBottom: "25px", maxWidth: "400px" }}
+            placeholder="Message"
+            value={fields.message}
+            error={errors.message.isError}
+            variant="standard"
+            fullWidth
+            multiline
+            size="medium"
+            onChange={(e) => handleChange(EFields.MESSAGE, e.target.value)}
+          />
+          <ButtonGroup fullWidth>
+            <Button
+              onClick={() => handleSubmit(fields)}
+              variant="contained"
+              color="primary"
+              sx={{
+                borderRadius: 0,
+                background: "rgba(30, 150, 200, .7)",
+                padding: "8px 35px",
+              }}
+            >
+              Submit
+            </Button>
+            <Button
+              onClick={handleReset}
+              sx={{
+                borderRadius: 0,
+                borderColor: "rgba(30, 170, 200, 1)",
+                color: "white",
+                padding: "8px 35px",
+                backgroundColor: "rgba(1, 1, 55, 0.6)",
+              }}
+            >
+              Reset
+            </Button>
+          </ButtonGroup>
+        </Box>
+      </div>
     </div>
   );
 }

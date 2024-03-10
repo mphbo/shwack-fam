@@ -2,8 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: white;
-    margin-bottom: 36vh;
+    background-color: rgba(1, 1, 55, 0.4);
+    width: 100%;
+    height: 100vh;
+}
+
+.emailInner {
+    margin-top: 40px;
+    background-color: rgba(1, 1, 55, 0.2);
+    padding: 30px 80px;
 }
 
 .heading {
