@@ -122,38 +122,40 @@ function SoundCloudWidget({
   };
 
   return (
-    <Card
-      sx={{
-        maxWidth: "800px",
-        width: "100%",
-        margin: "10px",
-        backgroundColor: "rgba(1, 1, 55, 0.4)",
-        borderRadius: 0,
-      }}
-    >
-      {/* <h4 className={styles.username}>{username}</h4> */}
-      <iframe
-        title="soundcloud-widget"
-        ref={iframeRef}
-        id="sound-cloud-player"
-        className={styles.iFrame}
-        style={isExpanded ? { height: 500 } : {}}
-        allow="autoplay"
-        src={`https://w.soundcloud.com/player/?url=${url}&amp;color=1D70A2`}
-      ></iframe>
-      <CardActions
+    <div className={styles.soundCloudWidget}>
+      <Card
         sx={{
-          height: "15px",
-          borderBottom: "solid rgba(1, 1, 55, 0.3) 0.25px",
-          borderLeft: "solid rgba(1, 1, 55, 0.3) 0.25px",
-          borderRight: "solid rgba(1, 1, 55, 0.3) 0.25px",
+          maxWidth: "800px",
+          width: "100%",
+          margin: "10px",
+          backgroundColor: "rgba(1, 1, 55, 0.4)",
+          borderRadius: 0,
         }}
       >
-        <ExpandMore expand={isExpanded} onClick={handleExpand}>
-          <ExpandMoreIcon sx={{ color: "white" }} />
-        </ExpandMore>
-      </CardActions>
-    </Card>
+        {/* <h4 className={styles.username}>{username}</h4> */}
+        <iframe
+          title="soundcloud-widget"
+          ref={iframeRef}
+          id="sound-cloud-player"
+          className={styles.iFrame}
+          style={isExpanded ? { height: 500 } : {}}
+          allow="autoplay"
+          src={`https://w.soundcloud.com/player/?url=${url}&amp;color=1D70A2`}
+        ></iframe>
+        <CardActions
+          sx={{
+            height: "15px",
+            borderBottom: "solid rgba(1, 1, 55, 0.3) 0.25px",
+            borderLeft: "solid rgba(1, 1, 55, 0.3) 0.25px",
+            borderRight: "solid rgba(1, 1, 55, 0.3) 0.25px",
+          }}
+        >
+          <ExpandMore expand={isExpanded} onClick={handleExpand}>
+            <ExpandMoreIcon sx={{ color: "white" }} />
+          </ExpandMore>
+        </CardActions>
+      </Card>
+    </div>
   );
 }
 

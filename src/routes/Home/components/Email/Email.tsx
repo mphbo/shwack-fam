@@ -90,6 +90,7 @@ function Home() {
               maxWidth: "400px",
             }}
             placeholder="Name"
+            color="success"
             value={fields.name}
             error={errors.name.isError}
             variant="standard"
