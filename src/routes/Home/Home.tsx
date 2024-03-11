@@ -9,6 +9,7 @@ import { Container } from "@mui/material";
 import Socials from "./components/Socials";
 import BottomNavbar from "./components/BottomNavbar";
 import { motion } from "framer-motion";
+import SideScroll from "./components/SideScroll";
 
 function Home() {
   const audio = useRef<null | HTMLAudioElement>(null);
@@ -40,7 +41,10 @@ function Home() {
           <div ref={soundcloudRef} className={styles.soundcloudSection}>
             <SoundCloudWidget audio={audio} />
           </div>
-          <div ref={emailRef} className={styles.socialsSection}>
+          <div className={styles.sideScrollSection}>
+            <SideScroll />
+          </div>
+          <div className={styles.socialsSection}>
             <Socials />
           </div>
           <div ref={emailRef} className={styles.emailSection}>

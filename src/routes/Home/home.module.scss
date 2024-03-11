@@ -40,6 +40,21 @@
   background-size: cover;
 }
 
+.sideScrollSection {
+  color: white;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #80abbe;
+  background-image: url('../../assets/side-scroll.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+
 .emailSection {
   z-index: -1;
   color: black;
