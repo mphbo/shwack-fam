@@ -8,6 +8,7 @@ import Email from "./components/Email";
 import { Container } from "@mui/material";
 import Socials from "./components/Socials";
 import BottomNavbar from "./components/BottomNavbar";
+import { motion } from "framer-motion";
 
 function Home() {
   const audio = useRef<null | HTMLAudioElement>(null);
@@ -25,21 +26,27 @@ function Home() {
     <div className={styles.page}>
       <Container disableGutters>
         <Navbar refs={{ visualizerRef, bioRef, soundcloudRef, emailRef }} />
-        <div ref={visualizerRef} className={styles.visualizerSection}>
-          <Visualizer audio={audio} />
-        </div>
-        <div ref={bioRef} className={styles.bioSection}>
-          <Bio />
-        </div>
-        <div ref={soundcloudRef} className={styles.soundcloudSection}>
-          <SoundCloudWidget audio={audio} />
-        </div>
-        <div ref={emailRef} className={styles.socialsSection}>
-          <Socials />
-        </div>
-        <div ref={emailRef} className={styles.emailSection}>
-          <Email />
-        </div>
+        <motion.main
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 4 }}
+        >
+          <div ref={visualizerRef} className={styles.visualizerSection}>
+            <Visualizer audio={audio} />
+          </div>
+          <div ref={bioRef} className={styles.bioSection}>
+            <Bio />
+          </div>
+          <div ref={soundcloudRef} className={styles.soundcloudSection}>
+            <SoundCloudWidget audio={audio} />
+          </div>
+          <div ref={emailRef} className={styles.socialsSection}>
+            <Socials />
+          </div>
+          <div ref={emailRef} className={styles.emailSection}>
+            <Email />
+          </div>
+        </motion.main>
         <BottomNavbar audio={audio} />
       </Container>
     </div>

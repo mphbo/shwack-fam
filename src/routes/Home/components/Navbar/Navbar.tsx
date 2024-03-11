@@ -16,6 +16,7 @@ import {
   useScrollTrigger,
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const pages = ["Home", "Music", "Email"];
 
@@ -35,12 +36,14 @@ function Navbar({
     target: undefined,
   });
 
+  const navigate = useNavigate();
+
   const handleClick = (page: string) => {
     page === "Music"
       ? soundcloudRef?.current?.scrollIntoView({ behavior: "smooth" })
       : page === "Email"
       ? emailRef?.current?.scrollIntoView({ behavior: "smooth" })
-      : visualizerRef?.current?.scrollIntoView({ behavior: "smooth" });
+      : navigate("/");
   };
 
   const accordionDetails = pages.map((page) => (
