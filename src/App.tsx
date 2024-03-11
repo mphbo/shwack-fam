@@ -7,9 +7,11 @@ import { AnimatePresence, motion } from "framer-motion";
 const AnimatedPage = ({ children }: any) => {
   return (
     <motion.main
-      initial={{ transform: "scale(500%)", rotate: 180, opacity: 0 }}
-      animate={{ transform: "scale(100%)", rotate: 0, opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 2 }}
+      initial={{
+        opacity: 0,
+      }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: "easeOut", duration: 1.5 }}
     >
       {children}
     </motion.main>
