@@ -114,7 +114,7 @@ function SoundCloudWidget({
   // React section button click event handlers (play/next/previous)
   //  - adjust React component state based on click events
 
-  const url = "https://soundcloud.com/logan-norman-thomas/sets/mostly-midtempo";
+  const url = "https://soundcloud.com/dark-arkade/sets/mostly-midtempo";
 
   const handleExpand = () => {
     setIsExpanded((prev) => !prev);

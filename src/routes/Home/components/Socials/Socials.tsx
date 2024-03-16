@@ -14,7 +14,7 @@ const socials = [
   },
   {
     title: "SoundCloud",
-    url: "https://soundcloud.com/logan-norman-thomas",
+    url: "https://soundcloud.com/dark-arkade",
     image: "soundcloud.svg",
   },
 ];
