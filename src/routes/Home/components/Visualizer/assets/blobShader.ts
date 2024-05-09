@@ -1,9 +1,6 @@
 import { shaderMaterial } from "@react-three/drei";
 // @ts-ignore
 import glsl from "babel-plugin-glsl/macro";
-// @ts-ignore
-import glslify from "glslify";
-import * as THREE from "three";
 const BlobShaderMaterial = shaderMaterial(
   // Uniform
   {
