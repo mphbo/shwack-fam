@@ -1,3 +1,3 @@
-# DARK ARKADE
+# SHWACK FAM ENTERTAINMENT
 
-A music production portfolio site developed with React, ThreeJS, React Three Fiber, OpenGL Shading Language and TypeScript
+A promotional website for the company SHWACK FAM ENTERTAINMENT developed with React and TypeScript
