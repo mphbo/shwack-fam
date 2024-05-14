@@ -22,16 +22,12 @@ const pages = ["Home", "Music", "Email"];
 
 interface NavBarProps {
   refs: {
-    visualizerRef: React.MutableRefObject<HTMLDivElement | null>;
-    bioRef: React.MutableRefObject<HTMLDivElement | null>;
     soundcloudRef: React.MutableRefObject<HTMLDivElement | null>;
     emailRef: React.MutableRefObject<HTMLDivElement | null>;
   };
 }
 
-function Navbar({
-  refs: { visualizerRef, bioRef, soundcloudRef, emailRef },
-}: NavBarProps) {
+function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
   const trigger = useScrollTrigger({
     target: undefined,
   });
@@ -62,13 +58,13 @@ function Navbar({
         <Container disableGutters>
           <Toolbar className={styles.navbar} disableGutters>
             {/* Desktop */}
-            <ChangeHistoryIcon
+            {/* <ChangeHistoryIcon
               sx={{
                 display: { xs: "none", md: "flex" },
                 mr: 2,
                 ml: 6,
               }}
-            />
+            /> */}
             <Typography
               variant="h6"
               noWrap
@@ -84,7 +80,7 @@ function Navbar({
                 textDecoration: "none",
               }}
             >
-              DARK ARKADE
+              SHWACK FAMILY
             </Typography>
 
             {/* Mobile */}
@@ -105,50 +101,48 @@ function Navbar({
                   id="panel1-header"
                 >
                   <div className={styles.title}>
-                    <ChangeHistoryIcon
+                    {/* <ChangeHistoryIcon
                       sx={{
                         display: { xs: "flex", md: "none" },
                         mr: 2,
                         mb: 0.3,
                         fontSize: 30,
                       }}
-                    />
-                    <div>
-                      <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                          mr: "15px",
-                          display: { xs: "flex", md: "none" },
-                          flexGrow: 0.0,
-                          fontFamily: "monospace",
-                          fontWeight: 700,
-                          letterSpacing: ".3rem",
-                          color: "inherit",
-                          textDecoration: "none",
-                        }}
-                      >
-                        DARK
-                      </Typography>
-                      <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                          mr: 2,
-                          fontFamily: "monospace",
-                          fontWeight: 700,
-                          letterSpacing: ".3rem",
-                          color: "inherit",
-                          textDecoration: "none",
-                        }}
-                      >
-                        ARKADE
-                      </Typography>
-                    </div>
+                    /> */}
+                    <Typography
+                      variant="h5"
+                      noWrap
+                      component="a"
+                      href="#app-bar-with-responsive-menu"
+                      sx={{
+                        mr: "11px",
+                        display: { xs: "flex", md: "none" },
+                        flexGrow: 0.0,
+                        fontFamily: "monospace",
+                        fontWeight: 700,
+                        letterSpacing: ".3rem",
+                        color: "inherit",
+                        textDecoration: "none",
+                      }}
+                    >
+                      Shwack
+                    </Typography>
+                    <Typography
+                      variant="h5"
+                      noWrap
+                      component="a"
+                      href="#app-bar-with-responsive-menu"
+                      sx={{
+                        mr: 2,
+                        fontFamily: "monospace",
+                        fontWeight: 700,
+                        letterSpacing: ".3rem",
+                        color: "inherit",
+                        textDecoration: "none",
+                      }}
+                    >
+                      Family
+                    </Typography>
                   </div>
                 </AccordionSummary>
                 {accordionDetails}
