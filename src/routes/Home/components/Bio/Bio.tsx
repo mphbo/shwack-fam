@@ -10,7 +10,7 @@ function Bio() {
         }}
       />
       <span className={styles.bioText}>
-        DARK ARKADE is a musical journey into the shadows, where melodies,
+        Shwack Fam is a musical journey into the shadows, where melodies,
         textures, and atmospheres create a captivating and haunting sonic
         landscape that evoke emotions and stories beyond the ordinary.
       </span>
