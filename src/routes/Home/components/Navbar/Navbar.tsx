@@ -93,7 +93,7 @@ function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
                 <AccordionSummary
                   className={styles.accordionSummary}
                   expandIcon={
-                    <ExpandMore sx={{ color: "white", fontSize: 28 }} />
+                    <ExpandMore sx={{ color: "black", fontSize: 28 }} />
                   }
                   aria-controls="panel1-content"
                   id="panel1-header"
@@ -118,7 +118,7 @@ function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
                 <Button
                   key={page}
                   onClick={() => handleClick(page)}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, color: "black", display: "block" }}
                 >
                   {page}
                 </Button>
