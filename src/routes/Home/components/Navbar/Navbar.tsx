@@ -79,9 +79,7 @@ function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
                 color: "inherit",
                 textDecoration: "none",
               }}
-            >
-              SHWACK FAM ENTERTAINMENT
-            </Typography>
+            ></Typography>
 
             {/* Mobile */}
             <Box
@@ -109,40 +107,7 @@ function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
                         fontSize: 30,
                       }}
                     /> */}
-                    <Typography
-                      variant="h5"
-                      noWrap
-                      component="a"
-                      href="#app-bar-with-responsive-menu"
-                      sx={{
-                        mr: "11px",
-                        display: { xs: "flex", md: "none" },
-                        flexGrow: 0.0,
-                        fontFamily: "monospace",
-                        fontWeight: 700,
-                        letterSpacing: ".3rem",
-                        color: "inherit",
-                        textDecoration: "none",
-                      }}
-                    >
-                      Shwack
-                    </Typography>
-                    <Typography
-                      variant="h5"
-                      noWrap
-                      component="a"
-                      href="#app-bar-with-responsive-menu"
-                      sx={{
-                        mr: 2,
-                        fontFamily: "monospace",
-                        fontWeight: 700,
-                        letterSpacing: ".3rem",
-                        color: "inherit",
-                        textDecoration: "none",
-                      }}
-                    >
-                      Fam Entertainment
-                    </Typography>
+                    <img src="/sfe-small.svg" />
                   </div>
                 </AccordionSummary>
                 {accordionDetails}
