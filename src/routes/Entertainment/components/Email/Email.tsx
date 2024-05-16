@@ -83,7 +83,7 @@ function Home() {
           flexDirection="column"
           alignItems="center"
         >
-          <p className={styles.heading}>Bookings and Contact:</p>
+          <p className={styles.heading}>Contact:</p>
           <StyledTextField
             sx={{
               marginBottom: "25px",
@@ -123,7 +123,7 @@ function Home() {
               color="primary"
               sx={{
                 borderRadius: 0,
-                background: "rgba(30, 150, 200, .7)",
+                background: "#51daff80",
                 padding: "8px 35px",
               }}
             >

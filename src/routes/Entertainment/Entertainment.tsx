@@ -37,19 +37,19 @@ function Entertainment() {
           </div>
           {/* <div ref={bioRef} className={styles.bioSection}>
             <Bio />
-          </div>
-          <div className={styles.socialsSection}>
+          </div> */}
+          {/* <div className={styles.socialsSection}>
             <Socials />
-          </div>
-          <div ref={soundcloudRef} className={styles.soundcloudSection}>
+          </div> */}
+          {/* <div ref={soundcloudRef} className={styles.soundcloudSection}>
             <SoundCloudWidget audio={audio} />
-          </div>
-          <div className={styles.sideScrollSection}>
+          </div> */}
+          {/* <div className={styles.sideScrollSection}>
             <SideScroll />
-          </div>
+          </div> */}
           <div ref={emailRef} className={styles.emailSection}>
             <Email />
-          </div> */}
+          </div>
         </motion.main>
         {/* <BottomNavbar audio={audio} /> */}
       </Container>
