@@ -7,12 +7,6 @@
     background-color: rgba(1, 1, 55, 0.4);
     width: 100%;
     height: 100vh;
-// import "@fontsource/league-spartan";
-// import "@fontsource/orbitron";
-// import "@fontsource/quicksand";
-// import "@fontsource/russo-one";
-// import "@fontsource/urbanist";
-// import "@fontsource/sarala";
 }
 
 .emailInner {
@@ -24,8 +18,10 @@
 }
 
 .heading {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 40px;
     margin-top: 0;
     width: 100%;
+    letter-spacing: 0;
+    font-weight: 400;
 }

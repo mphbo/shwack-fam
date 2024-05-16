@@ -28,13 +28,13 @@ function Entertainment() {
   return (
     <div className={styles.page}>
       <Container disableGutters>
-        <Navbar refs={{ soundcloudRef, emailRef }} />
+        <Navbar refs={{ eventsRef, emailRef }} />
         <motion.main
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 4 }}
         >
-          <div ref={introRef} className={styles.introSection}>
+          <div ref={eventsRef} className={styles.introSection}>
             <Intro />
           </div>
           {/* <div ref={eventsRef} className={styles.eventsSection}>

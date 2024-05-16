@@ -18,16 +18,16 @@ import {
 import { ExpandMore } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["Home", "Music", "Email"];
+const pages = ["Home", "Events", "Email"];
 
 interface NavBarProps {
   refs: {
-    soundcloudRef: React.MutableRefObject<HTMLDivElement | null>;
+    eventsRef: React.MutableRefObject<HTMLDivElement | null>;
     emailRef: React.MutableRefObject<HTMLDivElement | null>;
   };
 }
 
-function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
+function Navbar({ refs: { eventsRef, emailRef } }: NavBarProps) {
   const trigger = useScrollTrigger({
     target: undefined,
   });
@@ -35,8 +35,8 @@ function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
   const navigate = useNavigate();
 
   const handleClick = (page: string) => {
-    page === "Music"
-      ? soundcloudRef?.current?.scrollIntoView({ behavior: "smooth" })
+    page === "Events"
+      ? eventsRef?.current?.scrollIntoView({ behavior: "smooth" })
       : page === "Email"
       ? emailRef?.current?.scrollIntoView({ behavior: "smooth" })
       : navigate("/");
@@ -107,7 +107,7 @@ function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
                         fontSize: 30,
                       }}
                     /> */}
-                    <img src="/sfe-small.svg" />
+                    <img src="/sfe-small.svg" alt="shwack fam logo small" />
                   </div>
                 </AccordionSummary>
                 {accordionDetails}
