@@ -1,7 +1,48 @@
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .welcomeContainer {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 20px;
+
+    h1 {
+        margin: 0;
+        font-size: 60px;
+    }
+
+    .events {
+        padding: 40px 20px;
+        border-radius: 5px;
+        margin-top: 180px; 
+        background-color: #51daff50;
+    }
+
+    .eventsText {
+        letter-spacing: -2px;
+        margin: 0 0 20px 0;
+    }
+
+    .event {
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 30px;
+    }
 }
 
 .welcomeLogo {

@@ -15,6 +15,20 @@
   background-blend-mode: multiply;
 }
 
+.eventsSection {
+  z-index: -1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  // background-image: url('../../assets/email3.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
 .bioSection {
   color: white;
   height: 70vh;

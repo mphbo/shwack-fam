@@ -10,11 +10,13 @@ import BottomNavbar from "./components/BottomNavbar";
 import { motion } from "framer-motion";
 import SideScroll from "./components/SideScroll";
 import Intro from "./components/Intro";
+import Events from "./components/Events";
 
 function Entertainment() {
   const audio = useRef<null | HTMLAudioElement>(null);
 
   const introRef = useRef<null | HTMLDivElement>(null);
+  const eventsRef = useRef<null | HTMLDivElement>(null);
   const bioRef = useRef<null | HTMLDivElement>(null);
   const soundcloudRef = useRef<null | HTMLDivElement>(null);
   const emailRef = useRef<null | HTMLDivElement>(null);
@@ -35,6 +37,9 @@ function Entertainment() {
           <div ref={introRef} className={styles.introSection}>
             <Intro />
           </div>
+          {/* <div ref={eventsRef} className={styles.eventsSection}>
+            <Events />
+          </div> */}
           {/* <div ref={bioRef} className={styles.bioSection}>
             <Bio />
           </div> */}
