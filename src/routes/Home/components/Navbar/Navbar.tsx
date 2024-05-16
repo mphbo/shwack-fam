@@ -80,7 +80,7 @@ function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
                 textDecoration: "none",
               }}
             >
-              SHWACK FAMILY
+              SHWACK FAM ENTERTAINMENT
             </Typography>
 
             {/* Mobile */}
@@ -141,7 +141,7 @@ function Navbar({ refs: { soundcloudRef, emailRef } }: NavBarProps) {
                         textDecoration: "none",
                       }}
                     >
-                      Family
+                      Fam Entertainment
                     </Typography>
                   </div>
                 </AccordionSummary>

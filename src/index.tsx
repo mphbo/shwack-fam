@@ -2,6 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import "@fontsource/league-spartan";
+import "@fontsource/orbitron";
+import "@fontsource/quicksand";
+import "@fontsource/russo-one";
+import "@fontsource/urbanist";
+import "@fontsource/sarala";
 import App from "./App";
 
 const root = ReactDOM.createRoot(
