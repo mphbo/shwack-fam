@@ -10,7 +10,7 @@ function Landing() {
           <h2>ENTERTAINMENT</h2>
           <h1>FAM</h1>
         </div> */}
-        <Link to="./home" className={styles.button}>
+        <Link to="./entertainment" className={styles.button}>
           ENTER
         </Link>
         <img style={{ width: "100%" }} src={`/landing.svg`} />

@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import Home from "./routes/Home";
+import Entertainment from "./routes/Entertainment";
 import Landing from "./routes/Landing";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -28,8 +28,8 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/home",
-    element: <Home />,
+    path: "/entertainment",
+    element: <Entertainment />,
   },
 ]);
 
