@@ -8,7 +8,7 @@ const Landing = () => {
         <source src="/mandala.mp4" type="video/mp4" />
       </video>
       <div>
-        <p className={styles.mainText}>Welcome to the Family</p>
+        <img className={styles.mainText} src="/welcome.svg" />
       </div>
     </>
   );
