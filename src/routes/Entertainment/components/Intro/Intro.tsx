@@ -7,8 +7,8 @@ const Landing = () => {
       <video className={styles.video} muted autoPlay loop>
         <source src="/mandala.mp4" type="video/mp4" />
       </video>
-      <div>
-        <img className={styles.mainText} src="/welcome.svg" />
+      <div className={styles.welcomeContainer}>
+        <img className={styles.welcomeLogo} src="/welcome.svg" />
       </div>
     </>
   );

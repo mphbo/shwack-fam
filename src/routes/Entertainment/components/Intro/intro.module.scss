@@ -1,7 +1,13 @@
-.mainText {
-    font-size: 30px;
-    color: white;
+.welcomeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.welcomeLogo {
+    width: 80%;
+}
+
 .video {
     width: 100vw;
     height: 100vh;
