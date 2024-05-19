@@ -37,15 +37,15 @@ function Entertainment() {
           <div ref={eventsRef} className={styles.introSection}>
             <Intro />
           </div>
-          {/* <div ref={eventsRef} className={styles.eventsSection}>
-            <Events />
-          </div> */}
-          {/* <div ref={bioRef} className={styles.bioSection}>
-            <Bio />
-          </div> */}
           {/* <div className={styles.socialsSection}>
             <Socials />
           </div> */}
+          {/* <div ref={eventsRef} className={styles.eventsSection}>
+            <Events />
+          </div> */}
+          <div ref={bioRef} className={styles.bioSection}>
+            <Bio />
+          </div>
           {/* <div ref={soundcloudRef} className={styles.soundcloudSection}>
             <SoundCloudWidget audio={audio} />
           </div> */}

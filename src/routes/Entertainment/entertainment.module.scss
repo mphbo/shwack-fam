@@ -31,16 +31,11 @@
 
 .bioSection {
   color: white;
-  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #80abbe;
+  background-color: #fff;
   // background-image: url('../../assets/bio-arkade2.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-blend-mode: multiply;
 }
 
 .soundcloudSection {
@@ -84,12 +79,12 @@
 
 .socialsSection {
   color: white;
-  height: 70vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #80abbe;
   // background-image: url('../../assets/socials2.png');
+  background-color: #51daff;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
