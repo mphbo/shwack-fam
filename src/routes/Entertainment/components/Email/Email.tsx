@@ -123,7 +123,7 @@ function Home() {
               color="primary"
               sx={{
                 borderRadius: 0,
-                background: "#51daff80",
+                background: "linear-gradient(to bottom left, #51daff, #2b6eb0)",
                 padding: "8px 35px",
               }}
             >

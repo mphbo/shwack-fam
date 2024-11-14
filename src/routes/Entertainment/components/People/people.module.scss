@@ -1,0 +1,21 @@
+.people {
+    background: black;
+    padding: 10px 0px 20px 0px;
+    overflow: scroll;
+}
+
+.carousel {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    animation: scroll 300s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);            /* Start position */
+    }
+    100% {
+      transform: translateX(-100%);        /* Move entire content leftward */
+    }
+  }

@@ -18,16 +18,17 @@ import {
 import { ExpandMore } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["Home", "Events", "Email"];
+const pages = ["Home", "Team", "Email"];
 
 interface NavBarProps {
   refs: {
     eventsRef: React.MutableRefObject<HTMLDivElement | null>;
     emailRef: React.MutableRefObject<HTMLDivElement | null>;
+    peopleRef: React.MutableRefObject<HTMLDivElement | null>;
   };
 }
 
-function Navbar({ refs: { eventsRef, emailRef } }: NavBarProps) {
+function Navbar({ refs: { eventsRef, emailRef, peopleRef } }: NavBarProps) {
   const trigger = useScrollTrigger({
     target: undefined,
   });
@@ -35,8 +36,8 @@ function Navbar({ refs: { eventsRef, emailRef } }: NavBarProps) {
   const navigate = useNavigate();
 
   const handleClick = (page: string) => {
-    page === "Events"
-      ? eventsRef?.current?.scrollIntoView({ behavior: "smooth" })
+    page === "Team"
+      ? peopleRef?.current?.scrollIntoView({ behavior: "smooth" })
       : page === "Email"
       ? emailRef?.current?.scrollIntoView({ behavior: "smooth" })
       : navigate("/");
