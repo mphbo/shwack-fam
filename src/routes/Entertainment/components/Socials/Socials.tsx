@@ -15,7 +15,7 @@ const socials = [
 ];
 
 function Socials() {
-  const socialButtons = socials.map((social) => <SocialButton {...social} />);
+  const socialButtons = socials.map((social, i) => <SocialButton key={i} {...social} />);
 
   return <ul className={styles.list}>{socialButtons}</ul>;
 }
