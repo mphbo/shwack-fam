@@ -24,7 +24,7 @@ function Entertainment() {
   const emailRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
-    audio.current = new Audio("/id-v4.mp3");
+    audio.current = new Audio("/candy-shop.mp3");
   }, []);
 
   return (
@@ -61,7 +61,7 @@ function Entertainment() {
             <Email />
           </div>
         </motion.main>
-        {/* <BottomNavbar audio={audio} /> */}
+        <BottomNavbar audio={audio} />
       </Container>
     </div>
   );
