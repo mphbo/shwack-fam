@@ -52,12 +52,14 @@ function Person(props: IPerson) {
         }}
       >
         <div className={styles.learnmore}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            {name}
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {learnMore?.text}
-          </Typography>
+          <div className={styles.innercontent}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              {name}
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              {learnMore?.text}
+            </Typography>
+          </div>
         </div>
       </Modal>
     </>
