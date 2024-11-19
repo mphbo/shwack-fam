@@ -5,7 +5,7 @@ import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
 function Bio() {
   return (
     <div className={styles.bio}>
-      <img src="/sfe-small.svg" />
+      <img src="/sfe-small.svg" alt="small logo" />
       <span className={styles.bioText}>
         It all starts with music, music brought us together, and music is what
         we will bring to you. With a large number of djs, music producers and
