@@ -8,7 +8,13 @@ interface SocialButtonProps {
 
 function SocialButton({ title, url, image }: SocialButtonProps) {
   return (
-    <a href={url} className={styles.listItem} target="_blank" rel="noreferrer">
+    <a
+      key={title}
+      href={url}
+      className={styles.listItem}
+      target="_blank"
+      rel="noreferrer"
+    >
       <img alt={image.split(".")[0]} src={`/${image}`} />
     </a>
   );
