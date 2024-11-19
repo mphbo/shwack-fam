@@ -8,7 +8,7 @@
     display: inline-flex;
     align-items: center;
     gap: 20px;
-    animation: scroll 300s linear infinite;
+    // animation: scroll 300s linear infinite;
 }
 
 @keyframes scroll {
@@ -19,3 +19,13 @@
       transform: translateX(-100%);        /* Move entire content leftward */
     }
   }
+
+.learnmore {
+  width: 100%;
+  display: flex;
+  color: white;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}

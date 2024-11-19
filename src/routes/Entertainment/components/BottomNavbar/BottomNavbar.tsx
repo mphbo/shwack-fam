@@ -10,7 +10,7 @@ function BottomNavbar({
 }: {
   audio: React.MutableRefObject<HTMLAudioElement | null>;
 }) {
-  const [isPlaying, setIsPlaying] = useState<boolean>(true);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   const handleClick = () => {
     setIsPlaying((prev) => {
