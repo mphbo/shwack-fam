@@ -11,7 +11,7 @@ function Landing() {
         <img
           alt="shwack fam logo"
           style={{ width: "100%" }}
-          src={`/landing.svg`}
+          src={`/sfe-small.svg`}
         />
       </div>
     </div>
