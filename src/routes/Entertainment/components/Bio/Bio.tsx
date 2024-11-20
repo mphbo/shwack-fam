@@ -1,6 +1,5 @@
 import Socials from "../Socials";
 import styles from "./bio.module.scss";
-import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
 
 function Bio() {
   return (
