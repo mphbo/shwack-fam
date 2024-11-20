@@ -8,11 +8,7 @@ function Landing() {
         <Link to="./entertainment" className={styles.button}>
           ENTER
         </Link>
-        <img
-          alt="shwack fam logo"
-          style={{ width: "100%" }}
-          src={`/sfe-small.svg`}
-        />
+        <img alt="s-fam logo" style={{ width: "80%" }} src={`/sfe.svg`} />
       </div>
     </div>
   );

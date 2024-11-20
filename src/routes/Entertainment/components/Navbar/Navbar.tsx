@@ -108,7 +108,7 @@ function Navbar({ refs: { eventsRef, emailRef, peopleRef } }: NavBarProps) {
                         fontSize: 30,
                       }}
                     /> */}
-                    <img src="/sfe-small.svg" alt="shwack fam logo small" />
+                    <img src="/sfe-small.svg" alt="s-fam logo small" />
                   </div>
                 </AccordionSummary>
                 {accordionDetails}

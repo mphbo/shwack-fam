@@ -1,3 +1,3 @@
-# SHWACK FAM ENTERTAINMENT
+# S-FAM ENTERTAINMENT
 
-A promotional website for the company SHWACK FAM ENTERTAINMENT developed with React and TypeScript
+A promotional website for the company S-FAM ENTERTAINMENT developed with React and TypeScript
