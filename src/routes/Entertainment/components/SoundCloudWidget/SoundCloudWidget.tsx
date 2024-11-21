@@ -150,21 +150,17 @@ function SoundCloudWidget({
           title="soundcloud-widget"
           ref={iframeRef}
           id="sound-cloud-player"
-          className={styles.iFrame}
-          style={isExpanded ? { height: 500 } : {}}
+          className={isExpanded ? styles.expandedIFrame : styles.iFrame}
           allow="autoplay"
           src={`https://w.soundcloud.com/player/?url=${url}&amp;color=1D70A2`}
         ></iframe>
-        <CardActions
-          sx={{
-            height: "15px",
-            borderBottom: "solid rgba(1, 1, 55, 0.3) 0.25px",
-            borderLeft: "solid rgba(1, 1, 55, 0.3) 0.25px",
-            borderRight: "solid rgba(1, 1, 55, 0.3) 0.25px",
-          }}
-        >
-          <ExpandMore expand={isExpanded} onClick={handleExpand}>
-            <ExpandMoreIcon sx={{ color: "white" }} />
+        <CardActions>
+          <ExpandMore
+            sx={{ marginTop: -10 }}
+            expand={isExpanded}
+            onClick={handleExpand}
+          >
+            <ExpandMoreIcon sx={{ color: "black" }} />
           </ExpandMore>
         </CardActions>
       </Card>

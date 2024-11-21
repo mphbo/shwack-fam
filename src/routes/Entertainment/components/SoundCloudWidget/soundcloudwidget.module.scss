@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(1, 1, 55, 0.3);
     margin: 60px 0;
     color: white;
 }
@@ -27,8 +26,13 @@
     margin: 5px;
 }
 
-.iFrame {
+.iFrame, .expandedIFrame {
     border: none;
     height: 300px;
     width: 100%;
+    transition: height 0.5s ease;
+}
+
+.expandedIFrame {
+    height: 500px;
 }
