@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     color: white;
+    overflow: hidden;
 }
 
 .welcomeContainer {
@@ -53,8 +54,9 @@
 .video {
     height: 100%;
     width: 100%;
-    object-fit: cover;
     position: absolute;
+    object-fit: cover;
     margin-top: 64px;
+    max-width: 1200px;
     z-index: -1;
 }

@@ -1,4 +1,5 @@
 .page {
+  background: black;
 }
 
 .introSection {
@@ -8,7 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: #51daff80;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -22,7 +22,6 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  // background-image: url('../../assets/email3.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -35,14 +34,12 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  // background-image: url('../../assets/bio-arkade2.jpg');
 }
 
 .soundcloudSection {
   color: black;
   height: 90vh;
   background-color: black;
-  // background-image: url('../../assets/sc-arkade2.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -55,7 +52,6 @@
   justify-content: center;
   align-items: center;
   background-color: #80abbe;
-  // background-image: url('../../assets/side-scroll.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -65,12 +61,12 @@
 .emailSection {
   z-index: -1;
   color: black;
-  height: 75vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
-  // background-image: url('../../assets/email3.png');
+  background-color: rgba(1, 1, 55, 0.6);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -83,7 +79,6 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  // background-image: url('../../assets/email3.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -95,7 +90,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-image: url('../../assets/socials2.png');
   background-color: #51daff;
   background-repeat: no-repeat;
   background-position: center center;

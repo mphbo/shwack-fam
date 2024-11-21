@@ -1,21 +1,27 @@
-import { Typography } from "@mui/material";
+import { Typography, useMediaQuery } from "@mui/material";
 import styles from "./contact.module.scss";
 import Socials from "../Socials";
 import { Link } from "react-router-dom";
 
 function Home() {
+  const isLargeScreen = useMediaQuery("(min-width:500px)");
   return (
-    <div className={styles.contact}>
+    <div className={isLargeScreen ? styles.largeContact : styles.contact}>
       <Typography>Contact Email: mgmt@sfam.ca</Typography>
       <Socials footer />
-      <Typography className={styles.arkade}>
+      <Typography
+        className={isLargeScreen ? styles.largeArkade : styles.arkade}
+      >
         Website Design & Development:
         <Link
           to="https://instagram.com/dark.arkade"
           target="_blank"
           className={styles.button}
         >
-          <img src="/ARKADE.svg" alt="small logo" />
+          <img
+            src={isLargeScreen ? "/ARKADE.svg" : "/ARKADE2.svg"}
+            alt="small logo"
+          />
         </Link>
       </Typography>
     </div>

@@ -7,14 +7,9 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  h1 {
-    font-size: 180px;
-    letter-spacing: -15px;
-    margin: 0;
-  }
-  h2 {
-    font-size: 60px;
-    margin: 0;
+  img {
+    width: 80%;
+    max-width: 400px;
   }
 }
 .button {
