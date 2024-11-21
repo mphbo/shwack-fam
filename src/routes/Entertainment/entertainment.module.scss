@@ -37,25 +37,13 @@
 }
 
 .soundcloudSection {
+  display: flex;
+  justify-content: center;
   color: black;
-  height: 90vh;
   background-color: black;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-}
-
-.sideScrollSection {
-  color: white;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #80abbe;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-blend-mode: multiply;
 }
 
 .emailSection {
@@ -91,6 +79,19 @@
   justify-content: center;
   align-items: center;
   background-color: #51daff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.sideScrollSection {
+  color: white;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #80abbe;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

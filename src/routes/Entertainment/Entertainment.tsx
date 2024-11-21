@@ -6,12 +6,9 @@ import Bio from "./components/Bio";
 import People from "./components/People";
 import Email from "./components/Email";
 import { Container } from "@mui/material";
-import Socials from "./components/Socials";
 import BottomNavbar from "./components/BottomNavbar";
 import { motion } from "framer-motion";
-import SideScroll from "./components/SideScroll";
 import Intro from "./components/Intro";
-import Events from "./components/Events";
 import Contact from "./components/Contact";
 
 function Entertainment() {
@@ -40,30 +37,31 @@ function Entertainment() {
           <div ref={eventsRef} className={styles.introSection}>
             <Intro />
           </div>
-          {/* <div className={styles.socialsSection}>
-            <Socials />
-          </div> */}
-          {/* <div ref={eventsRef} className={styles.eventsSection}>
-            <Events />
-          </div> */}
           <div ref={bioRef} className={styles.bioSection}>
             <Bio />
           </div>
           <div ref={peopleRef} className={styles.bioSection}>
             <People />
           </div>
-          {/* <div ref={soundcloudRef} className={styles.soundcloudSection}>
+          <div ref={soundcloudRef} className={styles.soundcloudSection}>
             <SoundCloudWidget audio={audio} />
-          </div> */}
-          {/* <div className={styles.sideScrollSection}>
-            <SideScroll />
-          </div> */}
+          </div>
           <div ref={emailRef} className={styles.emailSection}>
             <Email />
           </div>
           <div className={styles.contactSection}>
             <Contact />
           </div>
+          {/* Components not being used, but kept here so not forgotten when adding new stuff */}
+          {/* <div className={styles.sideScrollSection}>
+            <SideScroll />
+          </div> */}
+          {/* <div className={styles.socialsSection}>
+            <Socials />
+          </div> */}
+          {/* <div ref={eventsRef} className={styles.eventsSection}>
+            <Events />
+          </div> */}
         </motion.main>
         <BottomNavbar audio={audio} />
       </Container>
