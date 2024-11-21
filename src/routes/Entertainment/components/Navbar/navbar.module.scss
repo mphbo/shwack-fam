@@ -43,9 +43,14 @@
     div {
         display: flex;
     }
-    img {
-        width: 150px;
-    }
+}
+
+.logo, .largeLogo {
+    width: 150px;
+}
+
+.largeLogo {
+    margin: 20px 30px 20px 20px;
 }
 
 .link {

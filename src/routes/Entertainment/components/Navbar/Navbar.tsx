@@ -18,7 +18,7 @@ import {
 import { ExpandMore } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["Home", "Team", "Email"];
+const pages = ["Home", "Team", "Contact"];
 
 interface NavBarProps {
   refs: {
@@ -38,7 +38,7 @@ function Navbar({ refs: { eventsRef, emailRef, peopleRef } }: NavBarProps) {
   const handleClick = (page: string) => {
     page === "Team"
       ? peopleRef?.current?.scrollIntoView({ behavior: "smooth" })
-      : page === "Email"
+      : page === "Contact"
       ? emailRef?.current?.scrollIntoView({ behavior: "smooth" })
       : navigate("/");
   };
@@ -108,13 +108,27 @@ function Navbar({ refs: { eventsRef, emailRef, peopleRef } }: NavBarProps) {
                         fontSize: 30,
                       }}
                     /> */}
-                    <img src="/sfe-small.svg" alt="s-fam logo small" />
+                    <img
+                      src="/sfe-small.svg"
+                      alt="s-fam logo small"
+                      className={styles.logo}
+                    />
                   </div>
                 </AccordionSummary>
                 {accordionDetails}
               </Accordion>
             </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+              }}
+            >
+              <img
+                src="/sfe-small.svg"
+                alt="s-fam logo small"
+                className={styles.largeLogo}
+              />
               {pages.map((page) => (
                 <Button
                   key={page}

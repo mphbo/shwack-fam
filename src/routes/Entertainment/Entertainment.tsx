@@ -61,7 +61,7 @@ function Entertainment() {
           <div ref={emailRef} className={styles.emailSection}>
             <Email />
           </div>
-          <div ref={emailRef} className={styles.contactSection}>
+          <div className={styles.contactSection}>
             <Contact />
           </div>
         </motion.main>
