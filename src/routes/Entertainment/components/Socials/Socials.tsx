@@ -14,12 +14,14 @@ const socials = [
   },
 ];
 
-function Socials() {
+function Socials({ footer = false }: { footer?: boolean }) {
   const socialButtons = socials.map((social, i) => (
     <SocialButton key={i} {...social} />
   ));
 
-  return <ul className={styles.list}>{socialButtons}</ul>;
+  return (
+    <ul className={footer ? styles.footer : styles.list}>{socialButtons}</ul>
+  );
 }
 
 export default Socials;

@@ -3,7 +3,14 @@
     width: 100%;
     padding: 0;
     display: flex;
-    gap: 10px;
+    gap: 30px;
+    justify-content: center;
+}
+.footer {
+    max-width: 400px;
+    padding: 0;
+    gap: 20px;
+    display: flex;
     justify-content: center;
 }
 .listItem {
@@ -11,7 +18,6 @@
     align-items: center;
     justify-content: center;
     padding: 30px 30px;
-    margin: 0 10px;
     border: solid rgba(255, 255, 255, 1) 3px;
     color: white;
     text-decoration: none;

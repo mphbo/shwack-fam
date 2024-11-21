@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import SideScroll from "./components/SideScroll";
 import Intro from "./components/Intro";
 import Events from "./components/Events";
+import Contact from "./components/Contact";
 
 function Entertainment() {
   const audio = useRef<null | HTMLAudioElement>(null);
@@ -59,6 +60,9 @@ function Entertainment() {
           </div> */}
           <div ref={emailRef} className={styles.emailSection}>
             <Email />
+          </div>
+          <div ref={emailRef} className={styles.contactSection}>
+            <Contact />
           </div>
         </motion.main>
         <BottomNavbar audio={audio} />

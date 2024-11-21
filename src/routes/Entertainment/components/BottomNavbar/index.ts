@@ -1,1 +1,1 @@
-export { default } from "./BottomNavbar";
+export { default } from "./MusicPlayButton";

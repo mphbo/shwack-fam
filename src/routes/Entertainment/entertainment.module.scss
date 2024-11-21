@@ -65,7 +65,20 @@
 .emailSection {
   z-index: -1;
   color: black;
-  height: 100vh;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  // background-image: url('../../assets/email3.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.contactSection {
+  z-index: -1;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;

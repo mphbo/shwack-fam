@@ -1,0 +1,13 @@
+.playButton {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    border-radius: 100%;
+    background-color: rgba(1, 1, 55, 0.3);
+    svg {
+        color: white;
+    }
+}
