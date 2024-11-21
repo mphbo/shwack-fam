@@ -2,7 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 
 import loadscript from "load-script";
 import styles from "./soundcloudwidget.module.scss";
-import { Card, CardActions, IconButton, styled } from "@mui/material";
+import {
+  Card,
+  CardActions,
+  IconButton,
+  styled,
+  Typography,
+} from "@mui/material";
 import { ExpandMore as ExpandMoreIcon } from "@mui/icons-material";
 
 // SoundCloud widget API
@@ -114,7 +120,7 @@ function SoundCloudWidget({
   // React section button click event handlers (play/next/previous)
   //  - adjust React component state based on click events
 
-  const url = "https://soundcloud.com/dark-arkade/sets/mostly-midtempo";
+  const url = "https://soundcloud.com/dark-arkade/sets/s-fam-entertainment";
 
   const handleExpand = () => {
     setIsExpanded((prev) => !prev);
@@ -123,9 +129,13 @@ function SoundCloudWidget({
 
   return (
     <div className={styles.soundCloudWidget}>
+      <div className={styles.heading}>
+        <Typography>Music From</Typography>
+        <h1>THE FAM</h1>
+      </div>
       <Card
         sx={{
-          maxWidth: "800px",
+          maxWidth: "1200px",
           width: "100%",
           margin: "10px",
           backgroundColor: "rgba(1, 1, 55, 0.4)",
