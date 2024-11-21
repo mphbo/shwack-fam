@@ -1,15 +1,17 @@
 import styles from "./musicplaybutton.module.scss";
 import { IconButton } from "@mui/material";
 import { Pause, PlayArrow } from "@mui/icons-material";
-import { useState } from "react";
+import React, { Dispatch } from "react";
 
 function MusicPlayButton({
   audio,
+  isPlaying,
+  setIsPlaying,
 }: {
   audio: React.MutableRefObject<HTMLAudioElement | null>;
+  setIsPlaying: Dispatch<React.SetStateAction<boolean>>;
+  isPlaying: boolean;
 }) {
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-
   const handleClick = () => {
     setIsPlaying((prev) => {
       if (prev) {
@@ -22,16 +24,20 @@ function MusicPlayButton({
   };
 
   return (
-    <div className={styles.playButton}>
-      {isPlaying ? (
-        <IconButton onClick={handleClick}>
-          <Pause />
-        </IconButton>
-      ) : (
-        <IconButton onClick={handleClick}>
-          <PlayArrow />
-        </IconButton>
-      )}
+    <div className={styles.outerContainer}>
+      <div className={styles.container}>
+        <div className={styles.playButton}>
+          {isPlaying ? (
+            <IconButton onClick={handleClick}>
+              <Pause />
+            </IconButton>
+          ) : (
+            <IconButton onClick={handleClick}>
+              <PlayArrow />
+            </IconButton>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

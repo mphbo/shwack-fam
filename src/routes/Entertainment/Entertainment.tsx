@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import styles from "./entertainment.module.scss";
 import SoundCloudWidget from "./components/SoundCloudWidget";
@@ -12,6 +12,7 @@ import Intro from "./components/Intro";
 import Contact from "./components/Contact";
 
 function Entertainment() {
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const audio = useRef<null | HTMLAudioElement>(null);
 
   const introRef = useRef<null | HTMLDivElement>(null);
@@ -44,7 +45,10 @@ function Entertainment() {
             <People />
           </div>
           <div ref={soundcloudRef} className={styles.soundcloudSection}>
-            <SoundCloudWidget audio={audio} />
+            <SoundCloudWidget
+              audio={audio}
+              pauseMusic={() => setIsPlaying(false)}
+            />
           </div>
           <div ref={emailRef} className={styles.emailSection}>
             <Email />
@@ -63,7 +67,11 @@ function Entertainment() {
             <Events />
           </div> */}
         </motion.main>
-        <BottomNavbar audio={audio} />
+        <BottomNavbar
+          audio={audio}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+        />
       </Container>
     </div>
   );

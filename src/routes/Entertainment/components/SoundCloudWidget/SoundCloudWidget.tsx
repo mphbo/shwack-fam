@@ -39,8 +39,10 @@ const ExpandMore = styled(
 
 function SoundCloudWidget({
   audio,
+  pauseMusic,
 }: {
   audio: React.MutableRefObject<HTMLAudioElement | null>;
+  pauseMusic: () => void;
 }) {
   // state
 
@@ -73,6 +75,7 @@ function SoundCloudWidget({
         // update state to playing
         setIsPlaying(true);
         audio?.current?.pause();
+        pauseMusic();
 
         // check to see if song has changed - if so update state with next index
         player.getCurrentSoundIndex((playerPlaylistIndex: number) => {
