@@ -29,7 +29,7 @@ function Entertainment() {
   return (
     <div className={styles.page}>
       <Container disableGutters>
-        <Navbar refs={{ eventsRef, emailRef, peopleRef }} />
+        <Navbar refs={{ eventsRef, emailRef, peopleRef, soundcloudRef }} />
         <motion.main
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

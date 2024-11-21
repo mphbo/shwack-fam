@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import styles from "./navbar.module.scss";
@@ -18,17 +17,20 @@ import {
 import { ExpandMore } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["Home", "Team", "Contact"];
+const pages = ["Home", "Team", "Music", "Contact"];
 
 interface NavBarProps {
   refs: {
     eventsRef: React.MutableRefObject<HTMLDivElement | null>;
     emailRef: React.MutableRefObject<HTMLDivElement | null>;
     peopleRef: React.MutableRefObject<HTMLDivElement | null>;
+    soundcloudRef: React.MutableRefObject<HTMLDivElement | null>;
   };
 }
 
-function Navbar({ refs: { eventsRef, emailRef, peopleRef } }: NavBarProps) {
+function Navbar({
+  refs: { eventsRef, emailRef, peopleRef, soundcloudRef },
+}: NavBarProps) {
   const trigger = useScrollTrigger({
     target: undefined,
   });
@@ -40,6 +42,8 @@ function Navbar({ refs: { eventsRef, emailRef, peopleRef } }: NavBarProps) {
       ? peopleRef?.current?.scrollIntoView({ behavior: "smooth" })
       : page === "Contact"
       ? emailRef?.current?.scrollIntoView({ behavior: "smooth" })
+      : page === "Music"
+      ? soundcloudRef?.current?.scrollIntoView({ behavior: "smooth" })
       : navigate("/");
   };
 
@@ -58,30 +62,6 @@ function Navbar({ refs: { eventsRef, emailRef, peopleRef } }: NavBarProps) {
       <AppBar className={styles.appBar} position="fixed">
         <Container disableGutters>
           <Toolbar className={styles.navbar} disableGutters>
-            {/* Desktop */}
-            {/* <ChangeHistoryIcon
-              sx={{
-                display: { xs: "none", md: "flex" },
-                mr: 2,
-                ml: 6,
-              }}
-            /> */}
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 3,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            ></Typography>
-
             {/* Mobile */}
             <Box
               // @ts-ignore
@@ -100,14 +80,6 @@ function Navbar({ refs: { eventsRef, emailRef, peopleRef } }: NavBarProps) {
                   id="panel1-header"
                 >
                   <div className={styles.title}>
-                    {/* <ChangeHistoryIcon
-                      sx={{
-                        display: { xs: "flex", md: "none" },
-                        mr: 2,
-                        mb: 0.3,
-                        fontSize: 30,
-                      }}
-                    /> */}
                     <img
                       src="/sfe-small.svg"
                       alt="s-fam logo small"
