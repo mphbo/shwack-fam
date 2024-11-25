@@ -14,7 +14,7 @@ function Home() {
       >
         Website Design & Development:
         <Link
-          to="https://instagram.com/dark.arkade"
+          to="https://instagram.com/arkadedesign.dev"
           target="_blank"
           className={styles.button}
         >
