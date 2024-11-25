@@ -7,7 +7,7 @@ function Home() {
   const isLargeScreen = useMediaQuery("(min-width:500px)");
   return (
     <div className={isLargeScreen ? styles.largeContact : styles.contact}>
-      <Typography>Contact Email: mgmt@sfam.ca</Typography>
+      <Typography>Contact Email: mgmt@s-fam.ca</Typography>
       <Socials footer />
       <Typography
         className={isLargeScreen ? styles.largeArkade : styles.arkade}
