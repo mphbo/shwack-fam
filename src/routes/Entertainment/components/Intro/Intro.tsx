@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <div className={styles.main}>
       <video className={styles.video} muted autoPlay loop>
-        <source src="/hex.mp4" type="video/mp4" />
+        <source src="/gregoland.mp4" type="video/mp4" />
       </video>
       <div className={styles.welcomeContainer}>
         {/* <img className={styles.welcomeLogo} src="/welcome.svg" /> */}
