@@ -47,7 +47,7 @@ function Person(props: IPerson) {
         sx={{
           backgroundImage: `url(${learnMore?.image})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100% auto",
+          backgroundSize: "contain",
           backgroundPosition: "center",
         }}
       >

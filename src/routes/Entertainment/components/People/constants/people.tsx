@@ -125,9 +125,11 @@ export const people: IPerson[] = [
     learnMore: {
       text: (
         <p>
-          asdf asdf asdf as dfa sdf askdjfaskld fakljsdf askldjf alksdjfa
-          slkdf;ja lskdfja ;lksdj falk;sdjf ;laksjd fklasjd flk;ajsd fkla
-          jsdkl;fj askldfja;lksdjflkasdjflkajsdf
+          Growing up in the rave scene in Edmonton, Jacob brings a unique
+          perspective to organizing and throwing events. Being a caring, easy
+          going and helpful person at heart, he is a valuable asset to S-Fam
+          Entertainment. With an eye for design, an ear for music, as well as an
+          aspiring DJ and musician we are lucky to have him.
         </p>
       ),
       image: "/jacob-profitt2.png",
