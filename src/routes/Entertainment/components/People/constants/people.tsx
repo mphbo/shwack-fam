@@ -1,3 +1,5 @@
+import { ISocial } from "../../Socials/constants/socials";
+
 export interface IPerson {
   name: string;
   title: string;
@@ -6,14 +8,7 @@ export interface IPerson {
     text: JSX.Element;
     image: string;
   };
-  socials?: {
-    instragram?: string;
-    tiktok?: string;
-    facebook?: string;
-    spotify?: string;
-    soundCloud?: string;
-    linkTree?: string;
-  };
+  socials?: ISocial[];
 }
 
 export const people: IPerson[] = [
@@ -32,6 +27,13 @@ export const people: IPerson[] = [
       ),
       image: "/dark-arkade2.png",
     },
+    socials: [
+      {
+        title: "Instagram",
+        url: "https://www.instagram.com/dark.arkade/",
+        image: "instagram.svg",
+      },
+    ],
   },
   {
     name: "Miner Joe (Nichole Cooke)",
@@ -96,6 +98,13 @@ export const people: IPerson[] = [
       ),
       image: "/bass-windu2.png",
     },
+    socials: [
+      {
+        title: "Instagram",
+        url: "https://www.instagram.com/basswindumusic/",
+        image: "instagram.svg",
+      },
+    ],
   },
   {
     name: "Dead City (Dylan Palin)",
@@ -117,6 +126,13 @@ export const people: IPerson[] = [
       ),
       image: "/dead-city2.png",
     },
+    socials: [
+      {
+        title: "Instagram",
+        url: "https://www.instagram.com/deadcitybass/",
+        image: "instagram.svg",
+      },
+    ],
   },
   {
     name: "Jacob Profitt",

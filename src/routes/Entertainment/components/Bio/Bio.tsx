@@ -1,6 +1,7 @@
 import { useMediaQuery } from "@mui/material";
 import Socials from "../Socials";
 import styles from "./bio.module.scss";
+import { mainSocials } from "../Socials/constants/socials";
 
 function Bio() {
   const isLargeScreen = useMediaQuery("(min-width:800px)");
@@ -14,7 +15,7 @@ function Bio() {
         shows that aren't just exciting but diverse as well. Welcome to the
         show, Welcome to the FAM.
       </span>
-      <Socials />
+      <Socials socials={mainSocials} />
     </div>
   );
 }

@@ -10,6 +10,8 @@ import {
 import styles from "../people.module.scss";
 import React, { useState } from "react";
 import { IPerson } from "../constants/people";
+import SocialButton from "../../Socials/components/SocialButton";
+import Socials from "../../Socials";
 
 function Person(props: IPerson) {
   const { name, image, title, learnMore, socials } = props;
@@ -28,7 +30,15 @@ function Person(props: IPerson) {
           <Typography>{name}</Typography>
           <Typography>{title}</Typography>
         </CardContent>
-        <CardActions sx={{ padding: "16px" }}>
+        <CardActions
+          sx={{
+            padding: "16px",
+            display: "flex",
+            justifyContent: "space-between",
+            height: 64,
+            alignItems: "flex-end",
+          }}
+        >
           <Button
             sx={{ color: "white", padding: 0 }}
             size="small"
@@ -36,6 +46,7 @@ function Person(props: IPerson) {
           >
             Learn More
           </Button>
+          {socials && <Socials socials={socials} footer people />}
         </CardActions>
       </Card>
       <Modal
