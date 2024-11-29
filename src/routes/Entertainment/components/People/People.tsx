@@ -12,6 +12,14 @@ function People() {
     ...people,
     ...people,
     ...people,
+    ...people,
+    ...people,
+    ...people,
+    ...people,
+    ...people,
+    ...people,
+    ...people,
+    ...people,
   ].map((person) => <Person {...person} />);
   return (
     <div className={styles.people}>
