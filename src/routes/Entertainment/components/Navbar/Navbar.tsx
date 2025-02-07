@@ -81,7 +81,7 @@ function Navbar({
                 >
                   <div className={styles.title}>
                     <img
-                      src="/nft-project2.svg"
+                      src="/sfe-small.svg"
                       alt="s-fam logo small"
                       className={styles.logo}
                     />

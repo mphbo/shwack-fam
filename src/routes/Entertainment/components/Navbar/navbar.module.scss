@@ -1,12 +1,11 @@
-@import '../../../../styles/variables';
-
 .appBar {
     background-color: transparent !important;
     box-shadow: none !important;
 }
 .navbar {
     // background-color: rgba(1, 1, 55, 0.3) !important;
-    background-image: linear-gradient(to bottom right, $secondary-orange, $primary-orange);
+    background-image: linear-gradient(to bottom right, #51daff, #2b6eb0);
+    // background-color: #2b6eb0 !important;
     color: black !important;
     border-radius: 0;
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);

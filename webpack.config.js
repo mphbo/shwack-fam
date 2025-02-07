@@ -33,8 +33,5 @@ module.exports = {
   },
   resolve: {
     extensions: [".ts", ".tsx"], // Add any additional file extensions you want to support
-    alias: {
-      "@styles": path.resolve(__dirname, "src/styles"),
-    },
   },
 };

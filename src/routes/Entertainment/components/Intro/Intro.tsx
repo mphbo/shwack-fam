@@ -4,21 +4,16 @@ import styles from "./intro.module.scss";
 const Intro = () => {
   return (
     <div className={styles.main}>
-      <img className={styles.video} src={"/polar bear.avif"} alt="small logo" />
+      <video className={styles.video} muted autoPlay loop>
+        <source src="/gregoland.mp4" type="video/mp4" />
+      </video>
       <div className={styles.welcomeContainer}>
-        <div className={styles.tagline}>
-          <h1>Tagline about</h1>
-          <h1>NFT Project</h1>
-        </div>
+        {/* <img className={styles.welcomeLogo} src="/welcome.svg" /> */}
+        <h1>WELCOME</h1>
+        <h1>TO THE FAM</h1>
         <div className={styles.events}>
-          <h2 className={styles.eventsText}>Optional Headline News Section:</h2>
-          <h3 className={styles.event}>
-            Minting - November 9th{" "}
-            <span>
-              (Could have active links here to larger news article below or
-              separate page)
-            </span>
-          </h3>
+          <h2 className={styles.eventsText}>Events:</h2>
+          <h3 className={styles.event}>GREGOLAND - November 9th</h3>
         </div>
       </div>
     </div>
