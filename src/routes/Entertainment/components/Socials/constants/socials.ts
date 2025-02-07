@@ -7,7 +7,7 @@ export interface ISocial {
 export const mainSocials: ISocial[] = [
   {
     title: "Instagram",
-    url: "https://www.instagram.com/sfamentertainment/",
+    url: "https://www.instagram.com/",
     image: "instagram.svg",
   },
   {

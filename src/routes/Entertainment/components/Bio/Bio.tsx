@@ -7,13 +7,20 @@ function Bio() {
   const isLargeScreen = useMediaQuery("(min-width:800px)");
   return (
     <div className={isLargeScreen ? styles.largeBio : styles.bio}>
-      <img className={styles.logo} src="/sfe-small.svg" alt="small logo" />
+      <img className={styles.logo} src="/nft-project.svg" alt="small logo" />
       <span className={isLargeScreen ? styles.largeBioText : styles.bioText}>
-        It all starts with music, music brought us together, and music is what
-        we will bring to you. With a large number of djs, music producers and
-        organizers under our banner, S-FAM Entertainment is here to throw you
-        shows that aren't just exciting but diverse as well. Welcome to the
-        show, Welcome to the FAM.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+        itaque mollitia incidunt debitis veritatis veniam! Sunt voluptatibus
+        laborum ipsum incidunt.
+      </span>
+      <span className={isLargeScreen ? styles.largeBioText : styles.bioText}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ratione
+        fugit esse odio molestias unde.
+      </span>
+      <span className={isLargeScreen ? styles.largeBioText : styles.bioText}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius
+        praesentium cumque minus modi debitis fugiat ab saepe! Non, repudiandae
+        obcaecati molestias maxime nisi reprehenderit.
       </span>
       <Socials socials={mainSocials} />
     </div>
