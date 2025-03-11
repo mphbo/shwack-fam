@@ -3,6 +3,7 @@ import "./App.css";
 import Entertainment from "./routes/Entertainment";
 import Landing from "./routes/Landing";
 import { AnimatePresence, motion } from "framer-motion";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 const AnimatedPage = ({ children }: any) => {
   return (
@@ -33,11 +34,31 @@ const router = createBrowserRouter([
   },
 ]);
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#fff", // Your primary color
+    },
+    secondary: {
+      main: "#51daff", // Your secondary color
+    },
+    background: {
+      default: "#fff", // Global background color
+    },
+    text: {
+      primary: "#fff", // Default text color
+    },
+  },
+});
+
 function App() {
   return (
-    <AnimatePresence>
-      <RouterProvider router={router} />
-    </AnimatePresence>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <AnimatePresence>
+        <RouterProvider router={router} />
+      </AnimatePresence>
+    </ThemeProvider>
   );
 }
 

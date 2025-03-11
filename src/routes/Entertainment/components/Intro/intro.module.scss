@@ -16,28 +16,39 @@
     justify-content: center;
     padding: 20px;
 
+    .welcomeText {
+        margin-bottom: 80px;
+    }
+
     h1 {
         margin: 0;
         font-size: 60px;
     }
 
+    .tabs {
+        width: 200px;
+    }
+
     .events {
-        padding: 40px 20px;
-        border-radius: 5px;
-        margin-top: 180px; 
         background-color: #00000050;
+        margin-top: 40px; 
+        max-width: 800px;
     }
 
     .eventsText {
-        letter-spacing: -2px;
-        margin: 0 0 20px 0;
+        margin: 40px 20px;
     }
 
     .event {
-        letter-spacing: -1px;
+        font-size: 120%;
     }
 
     h2 {
+        margin: 0;
+        font-size: 30px;
+    }
+
+    a {
         margin: 0;
         font-size: 40px;
     }
@@ -48,8 +59,48 @@
     }
 }
 
+.dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    .MuiPaper-root {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .eventImage {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.dialog {
+    display: flex;
+    justify-content: center; /* Horizontally centers the dialog */
+    align-items: center; /* Vertically centers the dialog */
+    padding: 0;
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+    position: relative;
+    background-color: black !important;
+  }
+  
+  .dialogContent {
+    display: flex;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center text horizontally */
+    width: 100%; /* Full screen width */
+    height: 100%; /* Full screen height */
+    padding: 0 !important; /* Remove padding to make the content stretch to full screen */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: Transparent background for readability */
+  }
+
 .welcomeLogo {
-    width: 80%;
+    width: 100%;
 }
 
 .video {
