@@ -29,6 +29,7 @@ const pulseAnimation = keyframes`
 
 const Intro = () => {
   const [tab, setTab] = useState<TabId>("upcoming");
+  const [prevTab, setPrevTab] = useState<TabId | "">("");
   const [eventImage, setEventImage] = useState<string>("");
   const [isEventOpen, setIsEventOpen] = useState<boolean>(false);
 
@@ -64,12 +65,20 @@ const Intro = () => {
               "& .MuiTabs-indicator": {
                 width: "5px", // Adjust thickness here
               },
+              "& .MuiTab-root": {
+                minHeight: "60px", // Adjust tab height here
+                padding: "12px 16px", // Control inner spacing
+              },
             }}
           >
             <Tab
               value="upcoming"
               label="Upcoming"
-              sx={{ fontSize: 25, alignItems: "start", color: "white" }}
+              sx={{
+                fontSize: 25,
+                alignItems: "start",
+                color: "white",
+              }}
             />
             <Tab
               value="past"
@@ -78,26 +87,48 @@ const Intro = () => {
             />
           </Tabs>
           <div className={styles.events}>
-            {tab === "upcoming" && (
-              <>
-                <h2 className={styles.eventsText}>Upcoming Events:</h2>
-                <EventButton
-                  name="May the 24th be with you"
-                  onClick={() => handleClick("/may24.png")}
-                />
-              </>
-            )}
-            {tab === "past" && (
-              <>
+            <div
+              className={
+                tab === "upcoming"
+                  ? styles.fadeEnter
+                  : prevTab === "upcoming"
+                  ? styles.fadeExit
+                  : ""
+              }
+            >
+              {tab === "upcoming" && (
                 <>
-                  <h2 className={styles.eventsText}>Past Events:</h2>
+                  <h2 className={styles.eventsText}>Upcoming Events:</h2>
+
                   <EventButton
-                    name="Gregoland - November 9th, 2024"
-                    onClick={() => handleClick("/gregoland.png")}
+                    name="May the 24th be with you"
+                    onClick={() => handleClick("/may24.png")}
+                    alert
                   />
                 </>
-              </>
-            )}
+              )}
+            </div>
+            <div
+              className={
+                tab === "past"
+                  ? styles.fadeEnter
+                  : prevTab === "past"
+                  ? styles.fadeExit
+                  : ""
+              }
+            >
+              {tab === "past" && (
+                <>
+                  <>
+                    <h2 className={styles.eventsText}>Past Events:</h2>
+                    <EventButton
+                      name="Gregoland - November 9th, 2024"
+                      onClick={() => handleClick("/gregoland.png")}
+                    />
+                  </>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
