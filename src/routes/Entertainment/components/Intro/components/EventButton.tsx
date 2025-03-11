@@ -37,7 +37,7 @@ const EventButton = ({
       fullWidth
       onClick={onClick}
     >
-      May the 24th be with you
+      {name}
     </Button>
   );
 };

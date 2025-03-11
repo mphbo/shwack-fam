@@ -69,12 +69,12 @@ const Intro = () => {
             <Tab
               value="upcoming"
               label="Upcoming"
-              sx={{ fontSize: 20, alignItems: "start", color: "white" }}
+              sx={{ fontSize: 25, alignItems: "start", color: "white" }}
             />
             <Tab
               value="past"
               label="Past"
-              sx={{ fontSize: 20, alignItems: "start", color: "white" }}
+              sx={{ fontSize: 25, alignItems: "start", color: "white" }}
             />
           </Tabs>
           <div className={styles.events}>
@@ -89,8 +89,13 @@ const Intro = () => {
             )}
             {tab === "past" && (
               <>
-                <h2 className={styles.eventsText}>Past Events:</h2>
-                <h3 className={styles.event}>GREGOLAND - November 9th</h3>
+                <>
+                  <h2 className={styles.eventsText}>Past Events:</h2>
+                  <EventButton
+                    name="Gregoland - November 9th, 2024"
+                    onClick={() => handleClick("/gregoland.png")}
+                  />
+                </>
               </>
             )}
           </div>
