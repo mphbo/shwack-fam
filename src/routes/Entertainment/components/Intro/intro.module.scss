@@ -33,6 +33,9 @@
         background-color: #00000050;
         margin-top: 10px; 
         max-width: 800px;
+        button:not(:last-child) {
+            margin-bottom: 10px;
+        }
     }
 
     .eventsText {

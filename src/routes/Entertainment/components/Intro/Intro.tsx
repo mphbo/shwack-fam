@@ -10,6 +10,7 @@ import {
   keyframes,
 } from "@mui/material";
 import EventButton from "./components/EventButton";
+import { useNavigate } from "react-router-dom";
 
 type TabId = "upcoming" | "past";
 
@@ -37,9 +38,13 @@ const Intro = () => {
     setTab(value);
   };
 
-  const handleClick = (url: string) => {
-    setIsEventOpen(true);
-    setEventImage(url);
+  const handleClick = (url: string, upcoming: boolean = false) => {
+    if (upcoming) {
+      window.open(url, "_blank");
+    } else {
+      setIsEventOpen(true);
+      setEventImage(url);
+    }
   };
 
   return (
@@ -101,8 +106,14 @@ const Intro = () => {
                   <h2 className={styles.eventsText}>Upcoming Events:</h2>
 
                   <EventButton
-                    name="May the 24th be with you"
-                    onClick={() => handleClick("/may24.png")}
+                    name="Gregoland"
+                    description="Nov 8th, 2025"
+                    onClick={() =>
+                      handleClick(
+                        "https://www.eventbrite.com/e/gregoland-1108-tickets-732626646057?aff=oddtdtcreator",
+                        true
+                      )
+                    }
                     alert
                   />
                 </>
@@ -119,13 +130,16 @@ const Intro = () => {
             >
               {tab === "past" && (
                 <>
-                  <>
-                    <h2 className={styles.eventsText}>Past Events:</h2>
-                    <EventButton
-                      name="Gregoland - November 9th, 2024"
-                      onClick={() => handleClick("/gregoland.png")}
-                    />
-                  </>
+                  <h2 className={styles.eventsText}>Past Events:</h2>
+                  <EventButton
+                    name="Gregoland - 2024"
+                    onClick={() => handleClick("/gregoland.png")}
+                  />
+                  <EventButton
+                    name="May the 24th"
+                    description="be with you"
+                    onClick={() => handleClick("/may24.png")}
+                  />
                 </>
               )}
             </div>

@@ -19,10 +19,12 @@ const pulseAnimation = keyframes`
 const EventButton = ({
   onClick,
   name,
+  description,
   alert = false,
 }: {
   onClick: () => void;
   name: string;
+  description?: string;
   alert?: boolean;
 }) => {
   return (
@@ -35,6 +37,8 @@ const EventButton = ({
         padding: "20px",
         fontSize: "30px",
         background: "#51daff33",
+        display: "flex",
+        flexDirection: "column",
         animation: alert
           ? `${pulseAnimation} 1.11s infinite cubic-bezier(0.4, 0, 0.6, 1)`
           : "",
@@ -42,7 +46,8 @@ const EventButton = ({
       fullWidth
       onClick={onClick}
     >
-      {name}
+      <div>{name}</div>
+      <div>{description}</div>
     </Button>
   );
 };

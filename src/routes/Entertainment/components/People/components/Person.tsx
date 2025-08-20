@@ -8,9 +8,8 @@ import {
   Typography,
 } from "@mui/material";
 import styles from "../people.module.scss";
-import React, { useState } from "react";
+import { useState } from "react";
 import { IPerson } from "../constants/people";
-import SocialButton from "../../Socials/components/SocialButton";
 import Socials from "../../Socials";
 
 function Person(props: IPerson) {
@@ -25,7 +24,7 @@ function Person(props: IPerson) {
           color: "black",
         }}
       >
-        <CardMedia component="img" image={image} />
+        <CardMedia component="img" image={image} sx={{ height: 350 }} />
         <CardContent sx={{ padding: "16px 16px 0 16px" }}>
           <Typography>{name}</Typography>
           <Typography>{title}</Typography>
@@ -41,7 +40,7 @@ function Person(props: IPerson) {
         >
           <Button
             sx={{ color: "white", padding: 0 }}
-            size="small"
+            size="medium"
             onClick={() => setOpen(true)}
           >
             Learn More

@@ -13,7 +13,7 @@ export interface IPerson {
 
 export const people: IPerson[] = [
   {
-    name: "Dark Arkade (Larry Tate)",
+    name: "Dark Arkade",
     title: "Organizer / Music Producer",
     image: "/dark-arkade.png",
     learnMore: {
@@ -66,8 +66,25 @@ export const people: IPerson[] = [
     },
   },
   {
-    name: "Jammie (Annie Williams, James Burford)",
-    title: "Organizer / DJ Group",
+    name: "Just Mie (Annie Williams)",
+    title: "Organizer / DJ",
+    image: "/jammie.png",
+    learnMore: {
+      text: (
+        <p>
+          Beyond anything else, music is about moments. The goosebumps you feel,
+          the bass in your bones, the secret smiles on the dancefloor. That’s
+          what Jammie is all about. A fusing of magical, musical joy, stowed
+          away in the hearts of every partygoer, yearning to awaken at the press
+          of a button.
+        </p>
+      ),
+      image: "/jammie2.png",
+    },
+  },
+  {
+    name: "Laurence (James Burford)",
+    title: "Organizer / DJ",
     image: "/jammie.png",
     learnMore: {
       text: (
@@ -150,5 +167,21 @@ export const people: IPerson[] = [
       ),
       image: "/jacob-profitt2.png",
     },
+  },
+  {
+    name: "Yung Deadly",
+    title: "Organizer / DJ",
+    image: "/yung-deadly.jpg",
+    learnMore: {
+      text: <p>Yung deadly is friggen deadly!</p>,
+      image: "/yung-deadly.jpg",
+    },
+    socials: [
+      {
+        title: "Instagram",
+        url: "https://www.instagram.com/theyungdeadly/",
+        image: "instagram.svg",
+      },
+    ],
   },
 ];
