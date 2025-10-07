@@ -21,7 +21,7 @@ function Landing() {
         <img
           className={styles.logo}
           alt="s-fam logo"
-          src={`/sfe-cropped-white.svg`}
+          src={`/sfe-cropped.svg`}
         />
         {/* <video autoPlay muted loop>
           <source src="/gregoland.mp4" type="video/mp4" />
