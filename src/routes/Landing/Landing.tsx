@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 const landingLinks = [
   {
-    title: "GREGOLAND 11/08 TICKETS",
-    url: "https://www.eventbrite.com/e/gregoland-1108-tickets-732626646057?aff=oddtdtcreator",
+    title: "GREGOLAND 11/07 TICKETS",
+    url: "https://www.eventbrite.com/e/gregoland-tickets-1609285408979",
   },
 ];
 
@@ -26,7 +26,7 @@ function Landing() {
         </div>
         {landingLinkElements}
         <Link to="./entertainment" className={styles.landingLink}>
-          ENTER
+          ENTER WEBSITE
         </Link>
         <img className={styles.logo} alt="s-fam logo" src={`/sfe.svg`} />
       </div>

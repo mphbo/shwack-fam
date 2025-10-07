@@ -107,10 +107,10 @@ const Intro = () => {
 
                   <EventButton
                     name="Gregoland"
-                    description="Nov 8th, 2025"
+                    description="Nov 7th, 2025"
                     onClick={() =>
                       handleClick(
-                        "https://www.eventbrite.com/e/gregoland-1108-tickets-732626646057?aff=oddtdtcreator",
+                        "https://www.eventbrite.com/e/gregoland-tickets-1609285408979",
                         true
                       )
                     }

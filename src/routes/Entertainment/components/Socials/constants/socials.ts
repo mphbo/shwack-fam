@@ -11,8 +11,8 @@ export const mainSocials: ISocial[] = [
     image: "instagram.svg",
   },
   {
-    title: "TikTok",
-    url: "https://www.tiktok.com/",
-    image: "tiktok.svg",
+    title: "Facebook",
+    url: "https://www.facebook.com/profile.php?id=61570925963018",
+    image: "facebook3.svg",
   },
 ];

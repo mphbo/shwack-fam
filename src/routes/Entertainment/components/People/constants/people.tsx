@@ -14,7 +14,7 @@ export interface IPerson {
 export const people: IPerson[] = [
   {
     name: "Dark Arkade",
-    title: "Organizer / Music Producer",
+    title: "Operations Lead / Music Producer",
     image: "/dark-arkade.png",
     learnMore: {
       text: (
@@ -37,7 +37,7 @@ export const people: IPerson[] = [
   },
   {
     name: "Miner Joe (Nichole Cooke)",
-    title: "Organizer / DJ",
+    title: "Marketing Lead / DJ",
     image: "/miner-joe.png",
     learnMore: {
       text: (
@@ -67,7 +67,7 @@ export const people: IPerson[] = [
   },
   {
     name: "Just Mie (Annie Williams)",
-    title: "Organizer / DJ",
+    title: "Creative Lead / DJ",
     image: "/jammie.png",
     learnMore: {
       text: (
@@ -84,7 +84,7 @@ export const people: IPerson[] = [
   },
   {
     name: "Laurence (James Burford)",
-    title: "Organizer / DJ",
+    title: "Finance Lead / DJ",
     image: "/jammie.png",
     learnMore: {
       text: (
@@ -105,13 +105,20 @@ export const people: IPerson[] = [
     image: "/bass-windu.png",
     learnMore: {
       text: (
-        <p>
-          BASS WINDU is a bass music producer from Edmonton, Alberta. With
-          blends of heavy bass and punchy drum patterns, he creates a raw and
-          hypnotic experience that takes inspiration from Sci-Fi and Fantasy.
-          Making his live debut, expect to hear a wide range of original music,
-          and remixes.
-        </p>
+        <>
+          <p>
+            BASS WINDU is a bass music producer from Edmonton, Alberta. With
+            blends of heavy bass and punchy drum patterns, he creates a raw and
+            hypnotic experience that takes inspiration from Sci-Fi and Fantasy.
+          </p>
+          <p>
+            Nearing the release of his diverse GEMS EP, expect to hear a wide
+            variety of genres. After 10 years of production, you can expect to
+            hear a set packed full of original music, and handcrafted remixes -
+            that will tell a story that keeps you guessing and touches on all of
+            aspects of human emotion.
+          </p>
+        </>
       ),
       image: "/bass-windu2.png",
     },
@@ -170,10 +177,18 @@ export const people: IPerson[] = [
   },
   {
     name: "Yung Deadly",
-    title: "Organizer / DJ",
+    title: "Community Lead / DJ",
     image: "/yung-deadly.jpg",
     learnMore: {
-      text: <p>Yung deadly is friggen deadly!</p>,
+      text: (
+        <p>
+          Yung Deadly is an up and coming DJ in the bass music/dubstep scene,
+          hailing from the mountainous town of Hinton, Alberta. With a unique
+          blend of aggressive drops and melodic hooks, he creates high-energy
+          sets that will keep crowd headbanging on the dance floor. Who's Ready
+          To Get Deadly?{" "}
+        </p>
+      ),
       image: "/yung-deadly.jpg",
     },
     socials: [
