@@ -7,27 +7,19 @@
     justify-content: center;
 }
 
-.footer {
-    max-width: 400px;
-    padding: 0;
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-}
-
 .listItem {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 30px;
+    padding: 50px 50px;
     border: solid rgba(255, 255, 255, 1) 3px;
     color: white;
     text-decoration: none;
     img {
         position: absolute;
         font-size: 20px;
-        width: 40px;
-        height: 40px;
+        width: 70px;
+        height: 70px;
     }
     p {
         width: 100%;
@@ -37,10 +29,33 @@
     }
 }
 
+.footer {
+    max-width: 400px;
+    padding: 0;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    .listItem {
+        padding: 30px 30px;
+        img {
+            position: absolute;
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+
 .people {
     .listItem {
         padding: 0 20px 0 0;
         border: none;
-
+        img {
+            position: absolute;
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+        }
     }
 }

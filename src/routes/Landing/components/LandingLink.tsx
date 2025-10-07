@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 
 function LandingLink({ title, url }: { title: string; url: string }) {
   return (
-    <Link to={url} className={styles.landingLink} target="_blank">
-      {title}
+    <Link
+      to={url}
+      className={`${styles.landingLink} ${styles.pulse}`}
+      target="_blank"
+    >
+      <p>{title}</p>
     </Link>
   );
 }
