@@ -11,10 +11,9 @@
   background-position: center center;
   background-size: cover;
   .logo {
-    position: absolute;
-    top: 0px;
-    width: 70%;
+    width: 80%;
     max-width: 400px;
+    margin-bottom: 50px;
   }
 }
 
@@ -64,7 +63,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   .landingLink {
     max-width: 800px;
     height: 100px;

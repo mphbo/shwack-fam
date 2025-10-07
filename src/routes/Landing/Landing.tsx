@@ -18,6 +18,11 @@ function Landing() {
   return (
     <div className="App">
       <div className={styles.main}>
+        <img
+          className={styles.logo}
+          alt="s-fam logo"
+          src={`/sfe-cropped-white.svg`}
+        />
         {/* <video autoPlay muted loop>
           <source src="/gregoland.mp4" type="video/mp4" />
         </video> */}
@@ -28,7 +33,6 @@ function Landing() {
         <Link to="./entertainment" className={styles.landingLink}>
           ENTER WEBSITE
         </Link>
-        <img className={styles.logo} alt="s-fam logo" src={`/sfe.svg`} />
       </div>
     </div>
   );
